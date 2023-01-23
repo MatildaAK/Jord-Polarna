@@ -7,7 +7,7 @@ import jakarta.persistence.Id;
 
 import java.util.List;
 
-@Entity
+//@Entity
 public class Level {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
