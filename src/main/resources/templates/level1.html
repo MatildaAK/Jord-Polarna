@@ -8,18 +8,24 @@
 
 <h1>HEJ</h1> <h1 th:text="${player.name}"></h1>
 
-<tr th:each="level : ${levelList}">
-    <th th:text="${level.name}"></th>
-    <th th:text="${level.pageList}"></th>
+<tr th:each="page : ${pages}">
+    <div th:if="${page.id == currentPage}">
+        <p th:text="${page.question}"></p>
+        <button type="button" th:text="${page.answers}" th:onclick="addPage()"></button>
+        <button th:text="5" ></button>
+        <button th:text="6" ></button>
+
+    </div>
 </tr>
 
-<tr th:each="answer : ${answerList}">
-    <th th:text="${answer}"></th>
-</tr>
+
+
+
 
 <div>
     <a th:href="'/'"><button class="startSida">Startsida</button></a>
 </div>
 
 </body>
+<script type="text/javascript" th:src="@{actions.js}"></script>
 </html>

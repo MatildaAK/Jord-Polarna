@@ -3,6 +3,7 @@ package com.example.grupp1;
 import com.example.grupp1.models.GameLevel;
 import com.example.grupp1.models.Page;
 import com.example.grupp1.models.Player;
+import com.example.grupp1.repository.PageRepository;
 import com.example.grupp1.repository.PlayerRepository;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,8 @@ public class GameController {
 
     @Autowired
     private PlayerRepository playerRepository;
+    @Autowired
+    private PageRepository pageRepository;
 
     @GetMapping("/")
     String reg(HttpSession session,  Model model){
@@ -42,18 +45,12 @@ public class GameController {
     @GetMapping("/level1")
     String start(Model model, HttpSession session){
         Player player = (Player) session.getAttribute("gameLevel");
-        List<String> answerList = new ArrayList<>();
-        answerList.add("1");
-        answerList.add("2");
-        answerList.add("3");
-        answerList.add("4");
-        Page page1 = new Page(1L, "Vad blir 1+1?","2");
-        List<Page> pageList = new ArrayList<>();
-        pageList.add(page1);
-        GameLevel level = new GameLevel(1L, "Level 1");
-        model.addAttribute("levelList", level);
-        model.addAttribute("answerList", answerList);
+        List<Page> pages = pageRepository.findAllGameLvl(1l);
+        int currentPage = 1;
+        session.setAttribute("current", currentPage);
         model.addAttribute("player", player);
+        model.addAttribute("pages", pages);
+        model.addAttribute("currentPage", currentPage);
 
         return "level1";
     }
