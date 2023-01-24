@@ -10,7 +10,9 @@
 
 <tr th:each="level : ${levelList}">
     <th th:text="${level.name}"></th>
+    <th th:text="${level.pageList}"></th>
 </tr>
+
 <tr th:each="answer : ${answerList}">
     <th th:text="${answer}"></th>
 </tr>
