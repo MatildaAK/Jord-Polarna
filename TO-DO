@@ -1,5 +1,9 @@
 24/1:
+- Lägga in data i en data.sql-fil för att få tillgång till riktigt data. DONE
+- Bygga ut funktioner så att det går att interagera med sidan och komma vidare till nästa steg. DONE
+- Hemknapp. DONE
 
-- Lägga in data i en data.sql-fil för att få tillgång till riktigt data.
-- Bygga ut funktioner så att det går att interagera med sidan och komma vidare till nästa steg.
-- Hemknapp.
+25/1:
+- Lösa att man kan trycka på fel svar utan att den kraschar
+- Få in svarsalternativ i databasen
+- CSS fix

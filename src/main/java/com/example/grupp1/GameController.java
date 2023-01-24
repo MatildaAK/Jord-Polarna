@@ -61,7 +61,6 @@ public class GameController {
     String answer(Model model, HttpSession session, @RequestParam String correctanswer, @RequestParam int id){
         Player player = (Player) session.getAttribute("gameLevel");
         List<Page> pages = pageRepository.findAllGameLvl(1l);
-
         int currentPage = id;
         currentPage +=1;
         model.addAttribute("player", player);
