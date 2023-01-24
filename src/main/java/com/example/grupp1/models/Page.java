@@ -1,9 +1,7 @@
-package com.example.grupp1;
+package com.example.grupp1.models;
 
+import com.example.grupp1.models.GameLevel;
 import jakarta.persistence.*;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 @Table(name="PAGE")
@@ -18,7 +16,7 @@ public class Page {
     String answers;
 
     @ManyToOne
-    private LevelSpel levelSpel;
+    private GameLevel gameLevel;
 
     public Page(Long id, String question, String answers) {
         this.id = id;
@@ -53,11 +51,11 @@ public class Page {
         this.answers = answers;
     }
 
-    public LevelSpel getLevelSpel() {
-        return levelSpel;
+    public GameLevel getGameLevel() {
+        return gameLevel;
     }
 
-    public void setLevelSpel(LevelSpel levelSpel) {
-        this.levelSpel = levelSpel;
+    public void setGameLevel(GameLevel gameLevel) {
+        this.gameLevel = gameLevel;
     }
 }

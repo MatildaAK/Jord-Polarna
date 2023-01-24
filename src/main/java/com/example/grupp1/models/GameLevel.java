@@ -1,4 +1,4 @@
-package com.example.grupp1;
+package com.example.grupp1.models;
 
 import jakarta.persistence.*;
 
@@ -6,24 +6,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name="LEVELSPEL")
-public class LevelSpel {
+@Table(name="GAMELEVEL")
+public class GameLevel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     Long id;
     @Column(name = "NAME")
     String name;
-    @OneToMany(mappedBy = "levelSpel", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "gameLevel", cascade = CascadeType.ALL)
     List<Page> pageList = new ArrayList<>(); //List of all pages in each level.
 
-    public LevelSpel(Long id, String name) {
+    public GameLevel(Long id, String name) {
         this.id = id;
         this.name = name;
 
     }
 
-    public LevelSpel() {
+    public GameLevel() {
     }
 
     public Long getId() {

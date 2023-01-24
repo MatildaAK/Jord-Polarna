@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<h1>HEJHEJ</h1>
+<h1>HEJ</h1> <h1 th:text="${player.name}"></h1>
 
 <tr th:each="level : ${levelList}">
     <th th:text="${level.name}"></th>
@@ -16,6 +16,10 @@
 <tr th:each="answer : ${answerList}">
     <th th:text="${answer}"></th>
 </tr>
+
+<div>
+    <a th:href="'/'"><button class="startSida">Startsida</button></a>
+</div>
 
 </body>
 </html>
