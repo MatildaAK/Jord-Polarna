@@ -17,10 +17,10 @@ public class GameController {
         answerList.add("2");
         answerList.add("3");
         answerList.add("4");
-        Page page1 = new Page(1L, "Vad blir 1+1?", answerList);
+        Page page1 = new Page(1L, "Vad blir 1+1?","2");
         List<Page> pageList = new ArrayList<>();
         pageList.add(page1);
-        Level level = new Level(1L, "Level 1", pageList);
+        LevelSpel level = new LevelSpel(1L, "Level 1");
         model.addAttribute("levelList", level);
         model.addAttribute("answerList", answerList);
 

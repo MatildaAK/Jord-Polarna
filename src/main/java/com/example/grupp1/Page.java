@@ -1,21 +1,26 @@
 package com.example.grupp1;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
-//@Entity
+@Entity
+@Table(name="PAGE")
 public class Page {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "PAGE_ID")
     Long id;
+    @Column(name = "QUESTION")
     String question;
-    List<String> answers;
+    @Column(name = "ANSWER")
+    String answers;
 
-    public Page(Long id, String question, List<String> answers) {
+    @ManyToOne
+    private LevelSpel levelSpel;
+
+    public Page(Long id, String question, String answers) {
         this.id = id;
         this.question = question;
         this.answers = answers;
@@ -40,11 +45,19 @@ public class Page {
         this.question = question;
     }
 
-    public List<String> getAnswers() {
+    public String getAnswers() {
         return answers;
     }
 
-    public void setAnswers(List<String> answers) {
+    public void setAnswers(String answers) {
         this.answers = answers;
+    }
+
+    public LevelSpel getLevelSpel() {
+        return levelSpel;
+    }
+
+    public void setLevelSpel(LevelSpel levelSpel) {
+        this.levelSpel = levelSpel;
     }
 }

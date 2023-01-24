@@ -1,27 +1,28 @@
 package com.example.grupp1;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
-//@Entity
-public class Level {
+@Entity
+public class LevelSpel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "LEVEL_ID")
     Long id;
+    @Column(name = "NAME")
     String name;
-    List<Page> pageList; //List of all pages in each level.
+    @OneToMany(mappedBy = "levelSpel", cascade = CascadeType.ALL)
+    List<Page> pageList = new ArrayList<>(); //List of all pages in each level.
 
-    public Level(Long id, String name, List<Page> pageList) {
+    public LevelSpel(Long id, String name) {
         this.id = id;
         this.name = name;
-        this.pageList = pageList;
+
     }
 
-    public Level() {
+    public LevelSpel() {
     }
 
     public Long getId() {
