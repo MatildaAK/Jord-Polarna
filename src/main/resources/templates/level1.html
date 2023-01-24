@@ -9,11 +9,15 @@
 <h1>HEJ</h1> <h1 th:text="${player.name}"></h1>
 
 <tr th:each="page : ${pages}">
-    <div th:if="${page.id == currentPage}">
+    <div id="" th:if="${page.id == session.current}">
         <p th:text="${page.question}"></p>
-        <button type="button" th:text="${page.answers}" th:onclick="addPage()"></button>
-        <button th:text="5" ></button>
-        <button th:text="6" ></button>
+
+        <form  action="/level1" method="POST">
+            <input type="hidden" name="id" th:value="${page.id}"/>
+            <button type="submit" name="correctanswer" th:text="${page.answers}"></button>
+            <button th:onclick="showAlert()" name="wronganswer" th:text="5" ></button>
+            <button th:onclick="showAlert()" th:text="6" ></button>
+        </form>
 
     </div>
 </tr>
@@ -27,5 +31,6 @@
 </div>
 
 </body>
+
 <script type="text/javascript" th:src="@{actions.js}"></script>
 </html>

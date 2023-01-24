@@ -12,6 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,6 +48,7 @@ public class GameController {
         Player player = (Player) session.getAttribute("gameLevel");
         List<Page> pages = pageRepository.findAllGameLvl(1l);
         int currentPage = 1;
+
         session.setAttribute("current", currentPage);
         model.addAttribute("player", player);
         model.addAttribute("pages", pages);
@@ -54,6 +56,21 @@ public class GameController {
 
         return "level1";
     }
+
+    @PostMapping("/level1")
+    String answer(Model model, HttpSession session, @RequestParam String correctanswer, @RequestParam int id){
+        Player player = (Player) session.getAttribute("gameLevel");
+        List<Page> pages = pageRepository.findAllGameLvl(1l);
+
+        int currentPage = id;
+        currentPage +=1;
+        model.addAttribute("player", player);
+        model.addAttribute("pages", pages);
+        session.setAttribute("current", currentPage);
+
+        return "level1";
+    }
+
 
 
 }
