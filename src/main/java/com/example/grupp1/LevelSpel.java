@@ -6,10 +6,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@Table(name="LEVELSPEL")
 public class LevelSpel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "LEVEL_ID")
+
     Long id;
     @Column(name = "NAME")
     String name;
