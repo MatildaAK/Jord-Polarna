@@ -50,7 +50,7 @@ public class GameController {
         Player player = (Player) session.getAttribute("gameLevel");
         List<Page> pages = pageRepository.findAllGameLvl(1l);
         int  currentPage = 1;
-        List<Answer> answers = answerRepository.findAllGameLvl(currentPage);
+        List<Answer> answers = answerRepository.findAllFromPage(currentPage);
         System.out.println(answers);
 
 
@@ -69,8 +69,7 @@ public class GameController {
         List<Page> pages = pageRepository.findAllGameLvl(1l);
 
         int currentPage = id;
-        List<Answer> answers = answerRepository.findAllGameLvl(currentPage);
-        model.addAttribute("answers", answers);
+
         System.out.println("CORRECTANSWER: "+pages.get(id-1).getCorrectAnswer());
         System.out.println("ANSWER: "+answer);
         if (pages.get(id-1).getCorrectAnswer()==answer){
@@ -80,6 +79,8 @@ public class GameController {
         }else{
             System.out.println("Du svara fel");
         }
+        List<Answer> answers = answerRepository.findAllFromPage(currentPage);
+        model.addAttribute("answers", answers);
         model.addAttribute("player", player);
         model.addAttribute("pages", pages);
         session.setAttribute("current", currentPage);
