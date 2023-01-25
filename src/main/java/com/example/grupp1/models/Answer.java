@@ -8,8 +8,9 @@ public class Answer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
+    private String answer;
 
-    private String answeropt;
+
 
     @ManyToOne
     private Page page;
@@ -17,9 +18,9 @@ public class Answer {
     public Answer() {
     }
 
-    public Answer(Long id, String answeropt) {
+    public Answer(Long id, String answer) {
         this.id = id;
-        this.answeropt = answeropt;
+        this.answer = answer;
     }
 
     public Long getId() {
@@ -30,12 +31,12 @@ public class Answer {
         this.id = id;
     }
 
-    public String getAnsweropt() {
-        return answeropt;
+    public String getAnswer() {
+        return answer;
     }
 
-    public void setAnsweropt(String answeropt) {
-        this.answeropt = answeropt;
+    public void setAnswer(String answer) {
+        this.answer = answer;
     }
 
     public Page getPage() {
@@ -44,5 +45,14 @@ public class Answer {
 
     public void setPage(Page page) {
         this.page = page;
+    }
+
+    @Override
+    public String toString() {
+        return "Answer{" +
+                "id=" + id +
+                ", answer='" + answer + '\'' +
+                ", page=" + page +
+                '}';
     }
 }

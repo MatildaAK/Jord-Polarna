@@ -17,17 +17,8 @@
 
         <form  action="/level1" method="POST">
             <input type="hidden" name="id" th:value="${page.id}"/>
-            <div class="column">
-            <button type="submit" name="answer" th:value="${page.answers}" th:text="${page.answers}" width="400" height="400"></button>
-            </div>
-                <div class="column">
-            <button class="PlayerInfo" th:onclick="showAlert()" name="answer" th:value="5" th:text="5" width="400" height="400"></button>
-            </div>
-    <div class="column">
-            <button class="PlayerInfo" th:onclick="showAlert()" name="answer" th:value="6" th:text="6" width="400" height="400" ></button>
-    </div>
-            <div class="column">
-        <button class="PlayerInfo" th:onclick="showAlert()" name="answer" th:value="7" th:text="7" width="400" height="400" ></button>
+            <div class="column" th:each="answer : ${answers}">
+            <button type="submit" name="answer" th:value="${answer.id}" th:text="${answer.answer}" width="400" height="400"></button>
             </div>
         </form>
 

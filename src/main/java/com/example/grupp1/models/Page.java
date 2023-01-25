@@ -10,7 +10,6 @@ import java.util.List;
 public class Page {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "PAGE_ID")
     Long id;
     @Column(name = "QUESTION")
     String question;

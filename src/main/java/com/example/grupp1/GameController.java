@@ -1,7 +1,9 @@
 package com.example.grupp1;
 
+import com.example.grupp1.models.Answer;
 import com.example.grupp1.models.Page;
 import com.example.grupp1.models.Player;
+import com.example.grupp1.repository.AnswerRepository;
 import com.example.grupp1.repository.PageRepository;
 import com.example.grupp1.repository.PlayerRepository;
 import jakarta.servlet.http.HttpSession;
@@ -22,6 +24,8 @@ public class GameController {
     private PlayerRepository playerRepository;
     @Autowired
     private PageRepository pageRepository;
+    @Autowired
+    private AnswerRepository answerRepository;
 
     @GetMapping("/")
     String reg(HttpSession session,  Model model){
@@ -45,24 +49,36 @@ public class GameController {
     String start(Model model, HttpSession session){
         Player player = (Player) session.getAttribute("gameLevel");
         List<Page> pages = pageRepository.findAllGameLvl(1l);
-        int currentPage = 1;
+        int  currentPage = 1;
+        List<Answer> answers = answerRepository.findAllGameLvl(currentPage);
+        System.out.println(answers);
+
 
         session.setAttribute("current", currentPage);
         model.addAttribute("player", player);
         model.addAttribute("pages", pages);
+        model.addAttribute("answers", answers);
         model.addAttribute("currentPage", currentPage);
 
         return "level1";
     }
 
     @PostMapping("/level1")
-    String answer(Model model, HttpSession session, @RequestParam String answer, @RequestParam int id){
+    String answer(Model model, HttpSession session, @RequestParam int answer, @RequestParam int id){
         Player player = (Player) session.getAttribute("gameLevel");
         List<Page> pages = pageRepository.findAllGameLvl(1l);
+
         int currentPage = id;
-        if (pages.get(id-1).getCorrectAnswer().equals(answer)){
+        List<Answer> answers = answerRepository.findAllGameLvl(currentPage);
+        model.addAttribute("answers", answers);
+        System.out.println("CORRECTANSWER: "+pages.get(id-1).getCorrectAnswer());
+        System.out.println("ANSWER: "+answer);
+        if (pages.get(id-1).getCorrectAnswer()==answer){
             currentPage +=1;
             System.out.println("Du svarade rätt.");
+
+        }else{
+            System.out.println("Du svara fel");
         }
         model.addAttribute("player", player);
         model.addAttribute("pages", pages);
