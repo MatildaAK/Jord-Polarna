@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Spelare</title>
+    <link rel="stylesheet" href="../static/style.css" th:href="'/style.css'">
 </head>
 <body>
 
 <form th:object="${gameLevel}" action="/register" method="POST">
-    Namn: <input type="text" th:field="*{name}"/>
-    <input type="hidden" th:if="${gameLevel.id != null}" th:field="*{id}"/>
-    <input type="submit" value="Spara spelare">
+    Namn: <input class="PlayerInfo" type="text" th:field="*{name}"/>
+    <input class="PlayerInfo" type="hidden" th:if="${gameLevel.id != null}" th:field="*{id}"/>
+    <input class="PlayerInfo" type="submit" value="Spara spelare">
 </form>
 
 </body>
