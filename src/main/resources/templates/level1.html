@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<h1>Välkommen</h1> <h1 th:text="${player.name}"></h1>
+<h1>Hej</h1> <h1 th:text="${player.name}"></h1>
 
 <tr th:each="page : ${pages}">
     <div id="" th:if="${page.id == session.current}">
@@ -16,9 +16,10 @@
         <form  action="/level1" method="POST">
             <input type="hidden" name="id" th:value="${page.id}"/>
             <button type="submit" name="answer" th:value="${page.answers}" th:text="${page.answers}"></button>
-            <button th:onclick="showAlert()" name="answer" th:value="5" th:text="5" ></button>
-            <button th:onclick="showAlert()" name="answer" th:value="6" th:text="6" ></button>
-            <button th:onclick="showAlert()" name="answer" th:value="7" th:text="7" ></button>
+            <img th:src="'/images/glasflaska.png'">
+            <button class="PlayerInfo" th:onclick="showAlert()" name="answer" th:value="5" th:text="5" ></button>
+            <button class="PlayerInfo" th:onclick="showAlert()" name="answer" th:value="6" th:text="6" ></button>
+            <button class="PlayerInfo" th:onclick="showAlert()" name="answer" th:value="7" th:text="7" ></button>
         </form>
 
     </div>
