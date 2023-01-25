@@ -15,13 +15,19 @@
 
         <form  action="/level1" method="POST">
             <input type="hidden" name="id" th:value="${page.id}"/>
-            <button type="submit" name="correctanswer" th:text="${page.answers}"></button>
-            <button th:onclick="showAlert()" name="wronganswer" th:text="5" action="/level1"></button>
-            <button th:onclick="showAlert()" th:text="6"></button>
+            <button type="submit" name="answer" th:value="${page.answers}" th:text="${page.answers}"></button>
+            <button th:onclick="showAlert()" name="answer" th:value="5" th:text="5" ></button>
+            <button th:onclick="showAlert()" name="answer" th:value="6" th:text="6" ></button>
+            <button th:onclick="showAlert()" name="answer" th:value="7" th:text="7" ></button>
         </form>
 
     </div>
 </tr>
+
+
+
+
+
 <div>
     <a th:href="'/'"><button class="startSida">Startsida</button></a>
 </div>

@@ -58,14 +58,18 @@ public class GameController {
     }
 
     @PostMapping("/level1")
-    String answer(Model model, HttpSession session, @RequestParam String correctanswer, @RequestParam int id){
+    String answer(Model model, HttpSession session, @RequestParam String answer, @RequestParam int id){
         Player player = (Player) session.getAttribute("gameLevel");
         List<Page> pages = pageRepository.findAllGameLvl(1l);
         int currentPage = id;
-        currentPage +=1;
+        if (pages.get(id-1).getAnswers().equals(answer)){
+            currentPage +=1;
+            System.out.println("Du svarade rätt.");
+        }
         model.addAttribute("player", player);
         model.addAttribute("pages", pages);
         session.setAttribute("current", currentPage);
+
 
         return "level1";
     }
