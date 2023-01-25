@@ -1,6 +1,5 @@
 package com.example.grupp1;
 
-import com.example.grupp1.models.GameLevel;
 import com.example.grupp1.models.Page;
 import com.example.grupp1.models.Player;
 import com.example.grupp1.repository.PageRepository;
@@ -14,7 +13,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -62,7 +60,7 @@ public class GameController {
         Player player = (Player) session.getAttribute("gameLevel");
         List<Page> pages = pageRepository.findAllGameLvl(1l);
         int currentPage = id;
-        if (pages.get(id-1).getAnswers().equals(answer)){
+        if (pages.get(id-1).getCorrectAnswer().equals(answer)){
             currentPage +=1;
             System.out.println("Du svarade rätt.");
         }

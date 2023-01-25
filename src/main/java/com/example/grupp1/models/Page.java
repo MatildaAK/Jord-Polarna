@@ -1,7 +1,9 @@
 package com.example.grupp1.models;
 
-import com.example.grupp1.models.GameLevel;
 import jakarta.persistence.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name="PAGE")
@@ -12,16 +14,18 @@ public class Page {
     Long id;
     @Column(name = "QUESTION")
     String question;
-    @Column(name = "ANSWER")
-    String answers;
-
+    @Column(name = "CORRECTANSWER")
+    Long correctAnswer;
     @ManyToOne
     private GameLevel gameLevel;
 
-    public Page(Long id, String question, String answers) {
+    @OneToMany(mappedBy = "page", cascade = CascadeType.ALL)
+    List<Answer> answers = new ArrayList<>();
+
+    public Page(Long id, String question, Long correctAnswer) {
         this.id = id;
         this.question = question;
-        this.answers = answers;
+        this.correctAnswer = correctAnswer;
     }
 
     public Page() {
@@ -43,12 +47,12 @@ public class Page {
         this.question = question;
     }
 
-    public String getAnswers() {
-        return answers;
+    public Long getCorrectAnswer() {
+        return correctAnswer;
     }
 
-    public void setAnswers(String answers) {
-        this.answers = answers;
+    public void setCorrectAnswer(Long correctAnswer) {
+        this.correctAnswer = correctAnswer;
     }
 
     public GameLevel getGameLevel() {
@@ -57,5 +61,13 @@ public class Page {
 
     public void setGameLevel(GameLevel gameLevel) {
         this.gameLevel = gameLevel;
+    }
+
+    public List<Answer> getAnswers() {
+        return answers;
+    }
+
+    public void setAnswers(List<Answer> answers) {
+        this.answers = answers;
     }
 }
