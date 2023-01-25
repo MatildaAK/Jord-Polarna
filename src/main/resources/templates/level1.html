@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Återvinning</title>
+    <link rel="stylesheet" href="../static/style.css" th:href="'/style.css'">
 </head>
 <body>
 
-<h1>HEJ</h1> <h1 th:text="${player.name}"></h1>
+<h1>Välkommen</h1> <h1 th:text="${player.name}"></h1>
 
 <tr th:each="page : ${pages}">
     <div id="" th:if="${page.id == session.current}">
@@ -15,17 +16,12 @@
         <form  action="/level1" method="POST">
             <input type="hidden" name="id" th:value="${page.id}"/>
             <button type="submit" name="correctanswer" th:text="${page.answers}"></button>
-            <button th:onclick="showAlert()" name="wronganswer" th:text="5" ></button>
-            <button th:onclick="showAlert()" th:text="6" ></button>
+            <button th:onclick="showAlert()" name="wronganswer" th:text="5" action="/level1"></button>
+            <button th:onclick="showAlert()" th:text="6"></button>
         </form>
 
     </div>
 </tr>
-
-
-
-
-
 <div>
     <a th:href="'/'"><button class="startSida">Startsida</button></a>
 </div>
