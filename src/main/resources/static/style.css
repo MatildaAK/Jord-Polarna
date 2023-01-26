@@ -10,6 +10,7 @@ body {
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
+  opacity: 76%;
 }
 
 /* Create three equal columns that float next to each other */
@@ -99,4 +100,27 @@ div.column button {
 
 #errormsg.hidden{
 visibility:hidden;
+}
+
+.PlayerName{
+
+Color: black;
+    background: white;
+    border-radius: 15px;
+    width: 300px;
+    text-align: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.BoxName{
+    display: flex;
+    justify-content:flex-end;
+    transform: translate(-50%, -50%);
+    color: Black;
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+
 }

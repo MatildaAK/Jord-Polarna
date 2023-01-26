@@ -7,9 +7,14 @@
 
 </head>
 <body>
-<div class="hero-image">
+<div class="OuterBox">
+    <div class="hero-image">
+
+        <h1 class="PlayerName ">Hej  <a th:text="${player.name}" ></a>!</h1>
+
     <div class="hero-text">
-        <h1>Hej <a th:text="${player.name}"></a></h1>
+
+
 
 <tr th:each="page : ${pages}">
     <div id="" th:if="${page.id == session.current}">
@@ -19,15 +24,15 @@
             <div class="BigBox">
             <input type="hidden" name="id" th:value="${page.id}"/>
             <div class="column" th:each="answer : ${answers}">
-            <button type="submit" name="answer" th:value="${answer.id}" width="400" height="400" th:data-name="${answer.id}" th:onclick="showId(this.getAttribute('data-name'))">
+            <button class= "ButtonInfo" type="submit" name="answer" th:value="${answer.id}" width="400" height="400" th:data-name="${answer.id}" th:onclick="showId(this.getAttribute('data-name'))">
                 <img class="imageButton" width="100" height="100" th:src="@{/images/{id}(id=${answer.answer})}" alt="batteri">
             </button>
             </div>
         </form>
 
             </div>
-        </div>
 
+    </div>
     </div>
 
 </tr>
@@ -42,7 +47,7 @@
     <a th:href="'/'"><button class="startSida">Startsida</button></a>
 </div>
 
-
+</div>
 </body>
 
 <script type="text/javascript" th:src="@{action.js}"></script>
