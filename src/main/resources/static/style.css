@@ -4,13 +4,13 @@ body {
 }
 /*Background Image*/
 .hero-image {
-  background-image: url("/images/background01.jpg "); /* The image used */
+  background-image: url("/images/background01.2.jpg "); /* The image used */
   background-color: #cccccc; /* Used if the image is unavailable */
   height: 800px; /* You must set a specified height */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
-  opacity: 76%;
+
 }
 
 /* Create three equal columns that float next to each other */
@@ -103,8 +103,7 @@ visibility:hidden;
 }
 
 .PlayerName{
-
-Color: black;
+    Color: black;
     background: white;
     border-radius: 15px;
     width: 300px;
@@ -114,13 +113,3 @@ Color: black;
     right: 20px;
 }
 
-.BoxName{
-    display: flex;
-    justify-content:flex-end;
-    transform: translate(-50%, -50%);
-    color: Black;
-    background-color: white;
-    border-radius: 15px;
-    padding: 20px;
-
-}
