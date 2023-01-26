@@ -18,29 +18,10 @@
         <form  action="/level1" method="POST">
             <div class="BigBox">
             <input type="hidden" name="id" th:value="${page.id}"/>
-            <div class="column">
-                <button class="ButtonInfo" type="submit" name="answer" th:value="${page.answers}" >
-                <button class="ButtonInfo" type="submit" name="answer">
-                    <img class="imageButton" width="100" height="100" src="images/glasflaska01.gif" alt="glasflaska">
-                </button>
-            </div>
-            <div class="column">
-                <button class="ButtonInfo" th:onclick="showAlert()" name="answer" th:value="4" >
-                    <img class="imageButton" width="100" height="100" src="images/glasflaska01.gif" alt="glasflaska">
-                </button>
-                 </div>
-            <div class="column">
-                <button class="ButtonInfo" th:onclick="showAlert()" name="answer" th:value="6" >
-                    <img class="imageButton" width="100" height="100" src="images/batteri01.gif" alt="batteri">
-                </button>
-            </div>
-            <div class="column">
-                <button class="ButtonInfo" th:onclick="showAlert()" name="answer" th:value="7" >
-                    <img class="imageButton" width="100" height="100" src="images/konservburk2.gif" alt="batteri">
-                </button>
-            </div>
             <div class="column" th:each="answer : ${answers}">
-            <button type="submit" name="answer" th:value="${answer.id}" th:text="${answer.answer}" width="400" height="400" th:data-name="${answer.id}" th:onclick="showId(this.getAttribute('data-name'))"></button>
+            <button type="submit" name="answer" th:value="${answer.id}" width="400" height="400" th:data-name="${answer.id}" th:onclick="showId(this.getAttribute('data-name'))">
+                <img class="imageButton" width="100" height="100" th:src="@{/images/{id}(id=${answer.answer})}" alt="batteri">
+            </button>
             </div>
         </form>
 
@@ -51,9 +32,9 @@
 
 </tr>
 
-<div id ="errormsg" class="hidden">
+<!--<div id ="errormsg" class="hidden">
     bla blabla
-</div>
+</div>-->
 
 
 
