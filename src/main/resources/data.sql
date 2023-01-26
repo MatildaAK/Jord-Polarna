@@ -21,9 +21,27 @@ INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('buske.png','Buske', 1)
 INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('lekplats.png','Lekplats', 1)
 
 -- Answers question 2 lvl 1
-INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) VALUES ('batterikärl.png','Parkbänk', 2)
-INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('glaskärl.png','Buske', 2)
-INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('buske.png','Plastkärl', 2)
-INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('lekplats.png','Gatan', 2)
+INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) VALUES ('parkbänk.png','Parkbänk', 2)
+INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('buske.png','Buske', 2)
+INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('plastkärl.png','Plastkärl', 2)
+INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('lekplats.png','Lekplats', 2)
+
+-- Answers question 3 lvl 1
+INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) VALUES ('batterikärl.png','Batterikärl', 3)
+INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('lekplats.png','Lekplats', 3)
+INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('plastkärl.png','Plastkärl', 3)
+INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('skräpkärl.png','Skräpkärl', 3)
+
+-- Answers question 4 lvl 1
+INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) VALUES ('batterikärl.png','batterikärl', 4)
+INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('parkbänk.png','Parkbänk', 4)
+INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('metallkärl2.png','Metallkärl', 4)
+INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('lekplats.png','Lekplats', 4)
+
+-- Answers question 5 lvl 1
+INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) VALUES ('sopkorg.png','Sopkorg', 5)
+INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('glaskärl.png','Glaskärl', 5)
+INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('buske.png','Buske', 5)
+INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('plastkärl.png','Plastkärl', 5)
 
 
