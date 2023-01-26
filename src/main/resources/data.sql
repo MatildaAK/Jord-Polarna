@@ -10,10 +10,10 @@ INSERT INTO PAGE (QUESTION , CORRECTANSWER, GAME_LEVEL_ID) VALUES ( 'Vad gör en
 INSERT INTO PAGE (QUESTION , CORRECTANSWER, GAME_LEVEL_ID) VALUES ( 'Det här glasspappret måste legat bredvid busskuren sedan snön smälte. Vi lägger det istället där det ska vara vilket är: ', 17, 1)
 
 -- Answers question 1 lvl 1
-INSERT INTO ANSWER(ANSWER, PAGE_ID) VALUES ('glasflaska01.gif', 1)
-INSERT INTO ANSWER(ANSWER, PAGE_ID) values ('glasflaska01.gif', 1)
-INSERT INTO ANSWER(ANSWER, PAGE_ID) values ('batteri01.gif', 1)
-INSERT INTO ANSWER(ANSWER, PAGE_ID) values ('konservburk2.gif', 1)
+INSERT INTO ANSWER(ANSWER, PAGE_ID) VALUES ('batterikärl.png', 1)
+INSERT INTO ANSWER(ANSWER, PAGE_ID) values ('glasskärl.gif', 1)
+INSERT INTO ANSWER(ANSWER, PAGE_ID) values ('lekplats.png', 1)
+INSERT INTO ANSWER(ANSWER, PAGE_ID) values ('buske.png§', 1)
 
 -- Answers question 2 lvl 1
 INSERT INTO ANSWER(ANSWER, PAGE_ID) values ('På parkbänken', 2)
