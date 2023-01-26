@@ -16,9 +16,10 @@
         <p th:text="${page.question}"></p>
 
         <form  action="/level1" method="POST">
+            <div class="BigBox">
             <input type="hidden" name="id" th:value="${page.id}"/>
             <div class="column">
-                <button class="ButtonInfo" type="submit" name="answer" th:value="${page.answers}" th:text="${page.answers}">
+                <button class="ButtonInfo" type="submit" name="answer" th:value="${page.answers}" >
                     <img class="imageButton" width="100" height="100" src="images/glasflaska01.gif" alt="glasflaska">
                 </button>
             </div>
@@ -35,8 +36,6 @@
             <div class="column">
                 <button class="ButtonInfo" th:onclick="showAlert()" name="answer" th:value="7" >
                     <img class="imageButton" width="100" height="100" src="images/konservburk2.gif" alt="batteri">
-            <div class="column" th:each="answer : ${answers}">
-            <button type="submit" name="answer" th:value="${answer.id}" th:text="${answer.answer}" width="400" height="400"></button>
             </div>
         </form>
 

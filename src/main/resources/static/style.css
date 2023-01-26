@@ -2,6 +2,7 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
+/*Background Image*/
 .hero-image {
   background-image: url("/images/background01.jpg "); /* The image used */
   background-color: #cccccc; /* Used if the image is unavailable */
@@ -17,6 +18,12 @@ div.column {
     border: 1px solid #ccc;
     float: left;
     width: 100px;
+    border-radius: 15px;
+
+     display: flex;
+      justify-content: center;
+      align-items: center;
+
 }
 /* When the mouse is over the image*/
 div.column:hover {
@@ -27,12 +34,16 @@ div.column:hover {
 /*The image inside the column*/
 div.column button {
   width: 100%;
-  height: auto;
+  height: 100%;
   border-radius: 15px;
+    display: flex;
+        justify-content: center;
+        align-items: center;
+
 }
 .imageAlternative{
     width: 100%;
-    height: auto;
+    height: 100%;
     border-radius: 15px;
 }
 
@@ -66,4 +77,22 @@ div.column button {
  background-color: #E1EDE3;
  border: #E1EDE3;
  border-radius: 15px;
+   display: flex;
+       justify-content: center;
+       align-items: center;
+}
+
+.BigBox{
+       display: flex;
+       flex-direction: row;
+       justify-content: center;
+       align-items: center;
+}
+
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 800px) {
+  .BigBox {
+    flex-direction: column;
+  }
 }
