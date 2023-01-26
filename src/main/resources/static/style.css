@@ -4,12 +4,13 @@ body {
 }
 /*Background Image*/
 .hero-image {
-  background-image: url("/images/background01.jpg "); /* The image used */
+  background-image: url("/images/background01.2.jpg "); /* The image used */
   background-color: #cccccc; /* Used if the image is unavailable */
   height: 800px; /* You must set a specified height */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
+
 }
 
 /* Create three equal columns that float next to each other */
@@ -100,3 +101,15 @@ div.column button {
 #errormsg.hidden{
 visibility:hidden;
 }
+
+.PlayerName{
+    Color: black;
+    background: white;
+    border-radius: 15px;
+    width: 300px;
+    text-align: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
