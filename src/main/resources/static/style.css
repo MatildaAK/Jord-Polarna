@@ -96,3 +96,7 @@ div.column button {
     flex-direction: column;
   }
 }
+
+#errormsg.hidden{
+visibility:hidden;
+}

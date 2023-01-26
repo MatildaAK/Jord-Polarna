@@ -20,6 +20,7 @@
             <input type="hidden" name="id" th:value="${page.id}"/>
             <div class="column">
                 <button class="ButtonInfo" type="submit" name="answer" th:value="${page.answers}" >
+                <button class="ButtonInfo" type="submit" name="answer">
                     <img class="imageButton" width="100" height="100" src="images/glasflaska01.gif" alt="glasflaska">
                 </button>
             </div>
@@ -36,6 +37,10 @@
             <div class="column">
                 <button class="ButtonInfo" th:onclick="showAlert()" name="answer" th:value="7" >
                     <img class="imageButton" width="100" height="100" src="images/konservburk2.gif" alt="batteri">
+                </button>
+            </div>
+            <div class="column" th:each="answer : ${answers}">
+            <button type="submit" name="answer" th:value="${answer.id}" th:text="${answer.answer}" width="400" height="400" th:data-name="${answer.id}" th:onclick="showId(this.getAttribute('data-name'))"></button>
             </div>
         </form>
 
@@ -46,6 +51,9 @@
 
 </tr>
 
+<div id ="errormsg" class="hidden">
+    bla blabla
+</div>
 
 
 
@@ -56,5 +64,5 @@
 
 </body>
 
-<script type="text/javascript" th:src="@{actions.js}"></script>
+<script type="text/javascript" th:src="@{action.js}"></script>
 </html>
