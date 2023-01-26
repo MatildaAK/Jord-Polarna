@@ -15,9 +15,15 @@ INSERT INTO PAGE (QUESTION , CORRECTANSWER, GAME_LEVEL_ID) VALUES ( 'Det är så
 INSERT INTO PAGE (QUESTION , CORRECTANSWER, GAME_LEVEL_ID) VALUES ( 'Äntligen helg och nu ska vi iväg på fotbollsmatch med laget! Matchen ligger en bit bort från där vi bor. Hur tar vi oss till fotbollsmatchen? ',  30, 2)
 
 -- Answers question 1 lvl 1
-INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) VALUES ('glasflaska01.gif','Glasflaska', 1)
-INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('glasflaska01.gif','Glasflaska', 1)
-INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('batteri01.gif','Batteri', 1)
-INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('konservburk2.gif','Konservburk', 1)
+INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) VALUES ('batterikärl.png','Batterikärl', 1)
+INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('glaskärl.png','Glaskärl', 1)
+INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('buske.png','Buske', 1)
+INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('lekplats.png','Lekplats', 1)
+
+-- Answers question 2 lvl 1
+INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) VALUES ('batterikärl.png','Parkbänk', 2)
+INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('glaskärl.png','Buske', 2)
+INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('buske.png','Plastkärl', 2)
+INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('lekplats.png','Gatan', 2)
 
 
