@@ -8,7 +8,9 @@ public class Answer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
-    private String answer;
+    private String picture;
+
+    private String alt;
 
 
 
@@ -18,9 +20,10 @@ public class Answer {
     public Answer() {
     }
 
-    public Answer(Long id, String answer) {
+    public Answer(Long id, String picture, String alt) {
         this.id = id;
-        this.answer = answer;
+        this.picture = picture;
+        this.alt = alt;
     }
 
     public Long getId() {
@@ -31,12 +34,12 @@ public class Answer {
         this.id = id;
     }
 
-    public String getAnswer() {
-        return answer;
+    public String getPicture() {
+        return picture;
     }
 
-    public void setAnswer(String answer) {
-        this.answer = answer;
+    public void setPicture(String picture) {
+        this.picture = picture;
     }
 
     public Page getPage() {
@@ -47,11 +50,19 @@ public class Answer {
         this.page = page;
     }
 
+    public String getAlt() {
+        return alt;
+    }
+
+    public void setAlt(String alt) {
+        this.alt = alt;
+    }
+
     @Override
     public String toString() {
         return "Answer{" +
                 "id=" + id +
-                ", answer='" + answer + '\'' +
+                ", answer='" + picture + '\'' +
                 ", page=" + page +
                 '}';
     }
