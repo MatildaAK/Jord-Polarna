@@ -21,12 +21,19 @@ div.column {
 /* When the mouse is over the image*/
 div.column:hover {
   border: 1px solid #777;
+  border-radius: 15px;
 }
 
 /*The image inside the column*/
 div.column button {
   width: 100%;
   height: auto;
+  border-radius: 15px;
+}
+.imageAlternative{
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
 }
 
 .hero-text {
@@ -46,4 +53,17 @@ div.column button {
     position: fixed;
     top: 10px;
     left: 10px;
+}
+
+.imageButton{
+    object-fit: fill;
+    border-radius: 15px;
+
+
+
+}
+.ButtonInfo{
+ background-color: #E1EDE3;
+ border: #E1EDE3;
+ border-radius: 15px;
 }
