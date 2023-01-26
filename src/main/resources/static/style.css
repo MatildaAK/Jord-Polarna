@@ -67,3 +67,7 @@ div.column button {
  border: #E1EDE3;
  border-radius: 15px;
 }
+
+#errormsg.hidden{
+visibility:hidden;
+}
