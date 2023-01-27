@@ -12,6 +12,26 @@ body {
   background-size: cover; /* Resize the background image to cover the entire container */
 
 }
+/*Background Image*/
+.hero-imagelvlstart {
+  background-image: url("/images/school01.jpg "); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  height: 800px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+
+}
+/*Background Image*/
+.hero-imagelvl1 {
+  background-image: url("/images/background01.2.jpg "); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  height: 800px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+
+}
 
 .hero-imagelvl2 {
   background-image: url("/images/cityview.png "); /* The image used */
@@ -131,6 +151,7 @@ visibility:hidden;
     position: fixed;
     margin-left: 25%;
     margin-right: 25%;
+    margin-top: 5%;
     display: flex;
 
 }
