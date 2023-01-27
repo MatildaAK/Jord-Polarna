@@ -48,7 +48,7 @@ public class GameController {
     @GetMapping("/level1")
     String start(Model model, HttpSession session){
         Player player = (Player) session.getAttribute("gameLevel");
-        List<Page> pages = pageRepository.findAllGameLvl(1);
+        List<Page> pages = pageRepository.findAllGameLvl(1L);
         int  currentPage = 1;
         List<Answer> answers = answerRepository.findAllFromPage(currentPage);
         System.out.println(answers);
@@ -66,7 +66,7 @@ public class GameController {
     @PostMapping("/level1")
     String answer(Model model, HttpSession session, @RequestParam int answer, @RequestParam int id){
         Player player = (Player) session.getAttribute("gameLevel");
-        List<Page> pages = pageRepository.findAllGameLvl(1);
+        List<Page> pages = pageRepository.findAllGameLvl(1L);
 
         int currentPage = id;
 
@@ -93,8 +93,8 @@ public class GameController {
     @GetMapping("/level2")
     String lvl2(Model model, HttpSession session){
         Player player = (Player) session.getAttribute("gameLevel");
-        List<Page> pages = pageRepository.findAllGameLvl(2);
-        int  currentPage = 6;
+        List<Page> pages = pageRepository.findAllGameLvl(2L);
+        int currentPage = 6;
         List<Answer> answers = answerRepository.findAllFromPage(currentPage);
         System.out.println(answers);
 
@@ -105,13 +105,15 @@ public class GameController {
         model.addAttribute("answers", answers);
         model.addAttribute("currentPage", currentPage);
 
+
+
         return "level2";
     }
 
     @PostMapping("/level2")
     String answerlvl2(Model model, HttpSession session, @RequestParam int answer, @RequestParam int id){
         Player player = (Player) session.getAttribute("gameLevel");
-        List<Page> pages = pageRepository.findAllGameLvl(2);
+        List<Page> pages = pageRepository.findAllGameLvl(2L);
 
         int currentPage = id;
 

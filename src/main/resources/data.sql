@@ -14,6 +14,9 @@ INSERT INTO PAGE (QUESTION , CORRECTANSWER, GAME_LEVEL_ID) VALUES ( 'Upp och hop
 INSERT INTO PAGE (QUESTION , CORRECTANSWER, GAME_LEVEL_ID) VALUES ( 'Det är så många kompisar vi vill träffa och prata med! Hur kan vi göra det när vi är på till skolan eller på väg hem från skolan? ', 24, 2)
 INSERT INTO PAGE (QUESTION , CORRECTANSWER, GAME_LEVEL_ID) VALUES ( 'Äntligen helg och nu ska vi iväg på fotbollsmatch med laget! Matchen ligger en bit bort från där vi bor. Hur tar vi oss till fotbollsmatchen? ',  30, 2)
 
+-- Questions lvl 3
+INSERT INTO PAGE (QUESTION , CORRECTANSWER, GAME_LEVEL_ID) VALUES ( 'TEST ',  31, 3)
+
 -- Answers question 1 lvl 1
 INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) VALUES ('batterikärl.png','Batterikärl', 1)
 INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('glaskärl.png','Glaskärl', 1)
@@ -47,7 +50,5 @@ INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('plastkärl.png','Plastkärl', 
 -- Answers question 1 lvl 2
 INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) VALUES ('sopkorg.png','Sopkorg', 6)    -- TEST
 
-INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) VALUES ('sopkorg.png','Sopkorg', 7)    -- TEST
 
-INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) VALUES ('sopkorg.png','Sopkorg', 8)    -- TEST
 
