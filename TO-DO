@@ -1,3 +1,5 @@
+SPRINT 1:
+
 24/1:
 - Lägga in data i en data.sql-fil för att få tillgång till riktigt data. DONE
 - Bygga ut funktioner så att det går att interagera med sidan och komma vidare till nästa steg. DONE
@@ -14,3 +16,21 @@
 - Få in rätt frågor i databasen (för level 1)
 
 - Välja level sida
+
+--------------
+SPRINT 2 (tom tisdag 15:00, 31/1):
+- Välja level-sida (efter inloggning), startsida, med en ikon/maskot som är klickbar - LEOPOLD
+- Feedback vid fel svar med tillhörande text, "popup" i CSS - MOUTASEM
+- Påbörja level 2 (tema och 1-2 frågor på plats) - CHRISTIAN
+- Beskrivning/syfte/instruktioner hur spelet fungerar på startsida. CAMILLA/MATILDA
+- Gruppnamn (till pitch på tisdag) - ALLA
+
+SPRINT 3:
+- Slutföra och finslipa level 1,2
+- Bygga level 3
+- Ljudelement i spelet (nice)
+- Unit test, minst 2
+- Filma/fotografera barn när de provar spelet, "produkttest" att ha med till presentationen.
+- Göra klart presentation
+- Städa kod, lägga in kommentarer
+- Öva! (Även i klassrummet på onsdag)
