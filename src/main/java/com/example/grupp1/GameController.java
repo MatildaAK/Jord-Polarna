@@ -43,7 +43,7 @@ public class GameController {
         sessionGameLevel.setName(gameLevel.getName());
         model.addAttribute("gameLevel", session.getAttribute("gameLevel"));
         playerRepository.save(sessionGameLevel);
-        return "redirect:/level1";
+        return "redirect:/levelOverview";
     }
     @GetMapping("/level1")
     String start(Model model, HttpSession session){
