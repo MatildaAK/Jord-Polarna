@@ -13,6 +13,16 @@ body {
 
 }
 
+.hero-imagelvl2 {
+  background-image: url("/images/cityview.png "); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  height: 800px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+
+}
+
 /* Create three equal columns that float next to each other */
 div.column {
     margin: 5px;

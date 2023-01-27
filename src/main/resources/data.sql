@@ -44,4 +44,10 @@ INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('glaskärl.png','Glaskärl', 5)
 INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('buske.png','Buske', 5)
 INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('plastkärl.png','Plastkärl', 5)
 
+-- Answers question 1 lvl 2
+INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) VALUES ('sopkorg.png','Sopkorg', 6)    -- TEST
+
+INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) VALUES ('sopkorg.png','Sopkorg', 7)    -- TEST
+
+INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) VALUES ('sopkorg.png','Sopkorg', 8)    -- TEST
 

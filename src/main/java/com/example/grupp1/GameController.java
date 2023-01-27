@@ -48,7 +48,7 @@ public class GameController {
     @GetMapping("/level1")
     String start(Model model, HttpSession session){
         Player player = (Player) session.getAttribute("gameLevel");
-        List<Page> pages = pageRepository.findAllGameLvl(1l);
+        List<Page> pages = pageRepository.findAllGameLvl(1);
         int  currentPage = 1;
         List<Answer> answers = answerRepository.findAllFromPage(currentPage);
         System.out.println(answers);
@@ -66,7 +66,7 @@ public class GameController {
     @PostMapping("/level1")
     String answer(Model model, HttpSession session, @RequestParam int answer, @RequestParam int id){
         Player player = (Player) session.getAttribute("gameLevel");
-        List<Page> pages = pageRepository.findAllGameLvl(1l);
+        List<Page> pages = pageRepository.findAllGameLvl(1);
 
         int currentPage = id;
 
@@ -89,6 +89,50 @@ public class GameController {
         return "level1";
     }
 
+
+    @GetMapping("/level2")
+    String lvl2(Model model, HttpSession session){
+        Player player = (Player) session.getAttribute("gameLevel");
+        List<Page> pages = pageRepository.findAllGameLvl(2);
+        int  currentPage = 6;
+        List<Answer> answers = answerRepository.findAllFromPage(currentPage);
+        System.out.println(answers);
+
+
+        session.setAttribute("current", currentPage);
+        model.addAttribute("player", player);
+        model.addAttribute("pages", pages);
+        model.addAttribute("answers", answers);
+        model.addAttribute("currentPage", currentPage);
+
+        return "level2";
+    }
+
+    @PostMapping("/level2")
+    String answerlvl2(Model model, HttpSession session, @RequestParam int answer, @RequestParam int id){
+        Player player = (Player) session.getAttribute("gameLevel");
+        List<Page> pages = pageRepository.findAllGameLvl(2);
+
+        int currentPage = id;
+
+        System.out.println("CORRECTANSWER: "+pages.get(id-1).getCorrectAnswer());
+        System.out.println("ANSWER: "+answer);
+        if (pages.get(id-1).getCorrectAnswer()==answer){
+            currentPage +=1;
+            System.out.println("Du svarade rätt.");
+
+        }else{
+            System.out.println("Du svara fel");
+        }
+        List<Answer> answers = answerRepository.findAllFromPage(currentPage);
+        model.addAttribute("answers", answers);
+        model.addAttribute("player", player);
+        model.addAttribute("pages", pages);
+        session.setAttribute("current", currentPage);
+
+
+        return "level2";
+    }
 
 
 }
