@@ -34,7 +34,7 @@ public class GameController {
             session.setAttribute("gameLevel", player);
         }
         model.addAttribute("gameLevel", session.getAttribute("gameLevel"));
-        return "player";
+        return "index";
     }
 
     @PostMapping("/register")

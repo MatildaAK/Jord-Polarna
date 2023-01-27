@@ -20,7 +20,6 @@ body {
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
-
 }
 
 /* Create three equal columns that float next to each other */
@@ -121,5 +120,38 @@ visibility:hidden;
     position: fixed;
     top: 20px;
     right: 20px;
+}
+
+.GroupName{
+    Color: black;
+    background: white;
+    border-radius: 15px;
+    max-width: 600px;
+    text-align: center;
+    position: fixed;
+    margin-left: 25%;
+    margin-right: 25%;
+    display: flex;
+
+}
+.MascotImage{
+    float: left;
+    max-width: 150px;
+    max-height: 150px;
+
+}
+.clearfix{
+    overflow: auto;
+}
+
+@media (max-width: 800px) {
+  .OuterBox {
+    flex-direction: column;
+  }
+}
+@media (max-width:800px;){
+    h3{
+    flex-direction: column;
+    }
 }
 
