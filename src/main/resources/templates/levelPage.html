@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Välj nivå</title>
+</head>
+<body>
+
+    <div>
+        <div class="hero-image">
+        <h1 class="PlayerName ">Hej, <a th:text="${player.name}" ></a>!</h1>
+        <div class="hero-text">
+    </div>
+    <div>
+        <p>Välj nivå: </p>
+    </div>
+    <div>
+        <a class="button" th:each="level : ${levelList}" th:text="${level.name}" th:value="${level.id}" th:href="'/level' + ${level.id}"></a>
+    </div>
+
+</body>
+</html>
