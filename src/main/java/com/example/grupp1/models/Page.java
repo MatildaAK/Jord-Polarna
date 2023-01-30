@@ -22,6 +22,7 @@ public class Page {
     @OneToMany(fetch = FetchType.EAGER,mappedBy = "page", cascade = CascadeType.ALL)
     List<Answer> answers = new ArrayList<>();
 
+
     public Page(Long id, String question, Long correctAnswer) {
         this.id = id;
         this.question = question;

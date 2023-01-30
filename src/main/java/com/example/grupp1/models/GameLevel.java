@@ -10,13 +10,14 @@ import java.util.List;
 public class GameLevel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     Long id;
     @Column(name = "NAME")
     String name;
     @OneToMany(mappedBy = "gameLevel", cascade = CascadeType.ALL)
     List<Page> pageList = new ArrayList<>(); //List of all pages in each level.
 
+    @OneToOne
+    private Player player;
     public GameLevel(Long id, String name) {
         this.id = id;
         this.name = name;

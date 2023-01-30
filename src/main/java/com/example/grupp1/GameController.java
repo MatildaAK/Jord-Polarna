@@ -4,6 +4,7 @@ import com.example.grupp1.models.Answer;
 import com.example.grupp1.models.Page;
 import com.example.grupp1.models.Player;
 import com.example.grupp1.repository.AnswerRepository;
+import com.example.grupp1.repository.LevelRepository;
 import com.example.grupp1.repository.PageRepository;
 import com.example.grupp1.repository.PlayerRepository;
 import jakarta.servlet.http.HttpSession;
@@ -27,6 +28,9 @@ public class GameController {
     @Autowired
     private AnswerRepository answerRepository;
 
+    @Autowired
+    private LevelRepository levelRepository;
+
     @GetMapping("/")
     String reg(HttpSession session,  Model model){
         if(session.getAttribute("gameLevel") == null) {
@@ -38,9 +42,10 @@ public class GameController {
     }
 
     @PostMapping("/register")
-    String register(HttpSession session, Model model, @ModelAttribute Player gameLevel) {
+    String register(HttpSession session, Model model, @ModelAttribute Player player) {
         Player sessionGameLevel = (Player) session.getAttribute("gameLevel");
-        sessionGameLevel.setName(gameLevel.getName());
+        sessionGameLevel.setName(player.getName());
+        sessionGameLevel.setGameLevel(levelRepository.findById(1L).get());
         model.addAttribute("gameLevel", session.getAttribute("gameLevel"));
         playerRepository.save(sessionGameLevel);
         return "redirect:/levelOverview";

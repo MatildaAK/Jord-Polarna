@@ -13,6 +13,11 @@ public class Player {
     String name;
     //String password;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "GAME_LEVEL_ID", referencedColumnName = "ID")
+    private GameLevel gameLevel;
+
+
     public Player() {
     }
 
@@ -36,4 +41,13 @@ public class Player {
     public void setName(String name) {
         this.name = name;
     }
+
+    public GameLevel getGameLevel() {
+        return gameLevel;
+    }
+
+    public void setGameLevel(GameLevel gameLevel) {
+        this.gameLevel = gameLevel;
+    }
 }
+
