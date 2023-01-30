@@ -120,9 +120,16 @@ public class GameController {
     String answerlvl2(Model model, HttpSession session){
         Player player = (Player) session.getAttribute("gameLevel");
         List<Page> pages = pageRepository.findAllGameLvl(2);
-
+        int amountQuestions = pages.size();
         int currentPage = (int)session.getAttribute("current");
-        currentPage++;
+        if(currentPage < amountQuestions){
+            currentPage++;
+        }else{
+            player.setGameLevel(levelRepository.findById(3L).get());
+            playerRepository.save(player);
+            return "redirect:/levelOverview";
+        }
+
 
         List<Answer> answers = answerRepository.findAllFromPage(currentPage);
         model.addAttribute("answers", answers);
