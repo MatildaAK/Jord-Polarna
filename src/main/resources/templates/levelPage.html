@@ -16,7 +16,7 @@
                      <h2>Välj nivå: </h2>
                      </div>
                     <div class="BigBox">
-                        <div class="column" th:each="level : ${levelList}">'
+                        <div class="column" th:each="level : ${levelList}">
                              <a th:href="'/level' + ${level.id}">
                                 <button type="submit" class="ButtonInfo"  th:value="${level.id}" width="300" height="300">
                                      <img class="imageButton" width="300" height="300"  th:src="@{/images/level{id}.png(id=${level.id})}" th:value="${level.id}">
