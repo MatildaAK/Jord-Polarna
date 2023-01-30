@@ -202,17 +202,20 @@ visibility:hidden !important;
     backdrop-filter: blur( 3px );
     border-radius: 10px;
     border: 1px solid rgba( 0, 0, 0, 0.5 );
+    }
 
-    .buttonRow{
+
+.buttonRow{
     display: flex !important;
     justify-content: space-between;
     align-items: center;
-    }
+}
 
-    .goButton{
-        background: transparent !important;
-         border-radius: 10px;
-    }
+.goButton{
+    background: transparent !important;
+    border-radius: 10px;
+    border: 1px;
+}
 
 @media (max-width: 800px) {
   .OuterBox {
