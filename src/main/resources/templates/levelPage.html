@@ -9,27 +9,26 @@
 
     <div>
         <div class="hero-imagelvlstart">
-        <h1 class="PlayerName ">Hej, <a th:text="${player.name}" ></a>!</h1>
-        <div class="hero-text">
-    </div>
-    <div>
-        <p>Välj nivå: </p>
-    </div>
+            <h1 class="PlayerName ">Hej, <a th:text="${player.name}" ></a>!</h1>
+                <div class="hero-text">
 
-        <div class="BigBox">
-        <div class="column" th:each="level : ${levelList}">'
-            <a th:href="'/level' + ${level.id}">
-            <button type="submit" class="ButtonInfo"  th:value="${level.id}" width="400" height="400">
-        <img class="imageButton" width="100" height="100"  th:src="@{/images/level{id}.png(id=${level.id})}" th:value="${level.id}">
-        </button>
-            </a>
-      <!--  <button type="submit" class="ButtonInfo" name="answer" th:value="${answer.id}" width="400" height="400" th:data-name="${answer.id}" th:onclick="showId(this.getAttribute('data-name'))">
-            <img class="imageButton" width="100" height="100" th:src="@{/images/{id}(id=${answer.picture})}" alt="${answer.alt}">
-        </button>-->
-    </div>
-        </div>
+                    <div>
+                     <h3>Välj nivå: </h3>
+                     </div>
+                    <div class="BigBox">
+                        <div class="column" th:each="level : ${levelList}">'
+                             <a th:href="'/level' + ${level.id}">
+                                <button type="submit" class="ButtonInfo"  th:value="${level.id}" width="400" height="400">
+                                     <img class="imageButton" width="300" height="300"  th:src="@{/images/level{id}.png(id=${level.id})}" th:value="${level.id}">
+                                </button>
+                             </a>
+
+                        </div>
+                    </div>
+                </div>
 
         </div>
+
     </div>
 
     <div class="HomeButton">

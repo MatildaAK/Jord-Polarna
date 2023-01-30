@@ -66,9 +66,9 @@ div.column button {
   width: 100%;
   height: 100%;
   border-radius: 15px;
-    display: flex;
-        justify-content: center;
-        align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
 .imageAlternative{
@@ -77,6 +77,18 @@ div.column button {
     border-radius: 15px;
 }
 
+.hero-textindex {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: Black;
+  background-color: #FAE7E6;
+  border-radius: 15px;
+  padding: 20px;
+
+}
 .hero-text {
   text-align: center;
   position: absolute;
@@ -84,9 +96,10 @@ div.column button {
   left: 50%;
   transform: translate(-50%, -50%);
   color: Black;
-  background-color: white;
+  background-color: transparent;
   border-radius: 15px;
   padding: 20px;
+  justify-content: space-between;
 
 }
 
@@ -95,18 +108,31 @@ div.column button {
     top: 10px;
     left: 10px;
 }
+.Player{
+     background-color: #FAEA7D;
+}
+.Player:hover{
+    background-color: #FAC952;
+}
+.startSida{
+     background-color: #FADBE6;
+}
+.startSida:hover{
+    background-color: #DFA3CD;
+}
 
 .imageButton{
     object-fit: fill;
     border-radius: 15px;
+
 }
 .ButtonInfo{
- background-color: #E1EDE3;
+ background-color: transparent;
  border: #E1EDE3;
  border-radius: 15px;
-   display: flex;
-       justify-content: center;
-       align-items: center;
+ display: flex;
+ justify-content: center;
+ align-items: center;
 }
 
 .BigBox{
@@ -130,7 +156,7 @@ visibility:hidden !important;
 
 .PlayerName{
     Color: black;
-    background: white;
+    background: #D8D9FB;
     border-radius: 15px;
     width: 300px;
     text-align: center;
@@ -141,12 +167,12 @@ visibility:hidden !important;
 
 .GroupName{
     Color: black;
-    background: white;
+    background: #D9F2CE;
     border-radius: 15px;
     max-width: 600px;
     text-align: center;
     position: fixed;
-    margin-left: 25%;
+    margin-left: 30%;
     margin-right: 25%;
     margin-top: 5%;
     display: flex;
@@ -156,6 +182,8 @@ visibility:hidden !important;
     float: left;
     max-width: 150px;
     max-height: 150px;
+    background-color: #FAE7E6;
+    border: #FAE7E6;
 
 }
 .clearfix{
@@ -187,6 +215,4 @@ Color: black;
     flex-direction: column;
     }
 }
-
-
 
