@@ -20,7 +20,7 @@ INSERT INTO PAGE (QUESTION , CORRECTANSWER, GAME_LEVEL_ID) VALUES ( 'TEST ',  31
 -- Answers question 1 lvl 1
 INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) VALUES ('batterikärl.png','Batterikärl', 1)
 INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('glaskärl.png','Glaskärl', 1)
-INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('buske.png','Buske', 1)
+INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('Sandlåda.png','Sandlåda', 1)
 INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('lekplats.png','Lekplats', 1)
 
 -- Answers question 2 lvl 1

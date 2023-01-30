@@ -55,9 +55,10 @@ div.column {
 }
 /* When the mouse is over the image*/
 div.column:hover {
-  border: 1px solid #777;
-  border-radius: 15px;
+   transform: scale(1.5);
+   /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
+
 
 /*The image inside the column*/
 div.column button {
@@ -98,13 +99,16 @@ div.column button {
   border-radius: 15px;
   padding: 20px;
   justify-content: space-around;
-
 }
+
 
 .HomeButton{
     position: fixed;
     top: 10px;
     left: 10px;
+}
+.Player{
+     font-size: 14px;
 }
 .PlayerInput{
      background-color: #FAEA7D;
@@ -238,5 +242,17 @@ pointer-events: none;
     h3{
     flex-direction: column;
     }
+}
+
+.question1{
+    color: #B2E0B1;
+   text-shadow: 2px 2px 4px #000000;
+   border-radius:10px;
+   padding:10px;
+   margin:10px;
+   shadow:10px;
+    font-size: 32px;
+    background: rgba( 255, 255, 255, 0.4 );
+    font-weight: bold;
 }
 
