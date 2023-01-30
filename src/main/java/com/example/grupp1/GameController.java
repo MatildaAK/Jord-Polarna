@@ -27,6 +27,8 @@ public class GameController {
     @Autowired
     private AnswerRepository answerRepository;
 
+
+
     @GetMapping("/")
     String reg(HttpSession session,  Model model){
         if(session.getAttribute("gameLevel") == null) {
@@ -69,9 +71,14 @@ public class GameController {
     String answer(Model model, HttpSession session){
         Player player = (Player) session.getAttribute("gameLevel");
         List<Page> pages = pageRepository.findAllGameLvl(1);
-
+        int amountQuestions = pages.size();
         int currentPage = (int)session.getAttribute("current");
-        currentPage++;
+        if(currentPage < amountQuestions){
+            currentPage++;
+        }else{
+            return "redirect:/levelOverview";
+        }
+
 
         List<Answer> answers = answerRepository.findAllFromPage(currentPage);
         model.addAttribute("answers", answers);

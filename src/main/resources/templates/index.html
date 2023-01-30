@@ -6,27 +6,26 @@
     <title>Spelare</title>
 </head>
 <body>
-<div class="OuterBox">
-<div class="hero-image">
-
-<div class="GroupName ">
-    <h1 >Välkommen till Gruppnamn! </h1>
-</div>
-    <div class="hero-text">
-        <div class="clearfix">
-        <img class="MascotImage" th:src="'/images/mascot.png'" alt="Mascot"><h3>Vad kul att du har hittat hit!</h3> <br>
-            Spelet går ut på att du klickar på bilden som du tycker stämmer mest in på frågan.
-          <br> Gruppnamn vänder sig till barn som vill lära sig mer om hur man kan hjälpa jorden att må bättre och att den ska klara sig längre.
-    <br>
-        <h3>Skriv in ditt namn för att börja spela</h3>
-    <form th:object="${gameLevel}" action="/register" method="POST">
-    Namn: <input class="Player" type="text" th:field="*{name}"/>
-    <input class="Player" type="hidden" th:if="${gameLevel.id != null}" th:field="*{id}"/>
-    <input class="Player" type="submit" value="Spara spelare">
-    </form>
+    <div class="OuterBox">
+        <div class="hero-image">
+            <div class="GroupName ">
+                <h1 >Välkommen till Gruppnamn! </h1>
+            </div>
+            <div class="hero-textindex">
+                <div class="clearfix">
+                    <img class="MascotImage" th:src="'/images/mascot.png'" alt="Mascot"><h3>Vad kul att du har hittat hit!</h3> <br>
+                    Spelet går ut på att du klickar på bilden som du tycker stämmer mest in på frågan.
+                    <br> Gruppnamn vänder sig till barn som vill lära sig mer om hur man kan hjälpa jorden att må bättre och att den ska klara sig längre.
+                    <br>
+                    <h3>Skriv in ditt namn för att börja spela</h3>
+                    <form th:object="${gameLevel}" action="/register" method="POST">
+                        Namn: <input class="Player" type="text" th:field="*{name}"/>
+                        <input class="Player" type="hidden" th:if="${gameLevel.id != null}" th:field="*{id}"/>
+                        <input class="Player" type="submit" value="Spara spelare">
+                    </form>
+                </div>
+            </div>
+         </div>
     </div>
-    </div>
-</div>
-</div>
 </body>
 </html>
