@@ -25,7 +25,7 @@
                                 </a>
                             </div>
                             <div th:if="${level.id > playerLevel}">
-                                    <button type="submit" class="ButtonInfo DisabledLevel" th:value="${level.id}" width="300" height="300" disabled>
+                                    <button type="submit" class="ButtonInfo DisabledLevel" th:value="${level.id}" width="300" height="300">
                                         <img class="imageButton" width="300" height="300"  th:src="@{/images/level{id}.png(id=${level.id})}" th:value="${level.id}">
                                     </button>
                             </div>

@@ -18,8 +18,10 @@
 
             <div th:each="page : ${pages}">
                 <div id="" th:if="${page.id == session.current}">
-                <h2 th:text="${page.question}"></h2>
+                <div class="question1">
 
+                    <h2  th:text="${page.question}"></h2>
+                </div>
                      <div class="BigBox">
                      <input type="hidden" name="id" th:value="${page.id}"/>
                          <div class="column" th:each="answer : ${answers}">
