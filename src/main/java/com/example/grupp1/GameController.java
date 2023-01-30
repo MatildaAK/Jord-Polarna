@@ -45,7 +45,7 @@ public class GameController {
     String register(HttpSession session, Model model, @ModelAttribute Player player) {
         Player sessionGameLevel = (Player) session.getAttribute("gameLevel");
         sessionGameLevel.setName(player.getName());
-        sessionGameLevel.setGameLevel(levelRepository.findById(1L).get());
+        sessionGameLevel.setGameLevel(levelRepository.findById(1L).get()); //Hämtar level-id för framtida upplåsning av nya levels.
         model.addAttribute("gameLevel", session.getAttribute("gameLevel"));
         playerRepository.save(sessionGameLevel);
         return "redirect:/levelOverview";
@@ -79,6 +79,8 @@ public class GameController {
         if(currentPage < amountQuestions){
             currentPage++;
         }else{
+            player.setGameLevel(levelRepository.findById(2L).get());
+            playerRepository.save(player);
             return "redirect:/levelOverview";
         }
 
