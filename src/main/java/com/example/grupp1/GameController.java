@@ -120,7 +120,7 @@ public class GameController {
     String answerlvl2(Model model, HttpSession session){
         Player player = (Player) session.getAttribute("gameLevel");
         List<Page> pages = pageRepository.findAllGameLvl(2);
-        int amountQuestions = pages.size();
+        int amountQuestions = pages.size()+5;
         int currentPage = (int)session.getAttribute("current");
         if(currentPage < amountQuestions){
             currentPage++;
