@@ -52,11 +52,13 @@ div.column {
     justify-content: center;
     align-items: center;
 
+
 }
 /* When the mouse is over the image*/
 div.column:hover {
-  border: 1px solid #777;
-  border-radius: 15px;
+  transform: scale(1.5);
+  /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport)*/
+
 }
 
 /*The image inside the column*/
@@ -85,6 +87,7 @@ div.column button {
   background-color: #FAE7E6;
   border-radius: 15px;
   padding: 20px;
+
 
 }
 .hero-text {
@@ -240,3 +243,15 @@ pointer-events: none;
     }
 }
 
+.question1{
+    color: #FADBE6;
+    text-shadow: 2px 2px 4px #000000;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 30px;
+    shadow: 10px;
+    font-size: 32px;
+    background: rgba( 255, 255, 255, 0.4 );
+    font-weight: bold;
+
+}
