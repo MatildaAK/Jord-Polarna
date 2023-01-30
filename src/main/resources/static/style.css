@@ -59,7 +59,6 @@ div.column:hover {
    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
-
 /*The image inside the column*/
 div.column button {
   width: 100%;
@@ -99,8 +98,8 @@ div.column button {
   border-radius: 15px;
   padding: 20px;
   justify-content: space-around;
-}
 
+}
 
 .HomeButton{
     position: fixed;
@@ -245,14 +244,14 @@ pointer-events: none;
 }
 
 .question1{
-    color: #B2E0B1;
-   text-shadow: 2px 2px 4px #000000;
-   border-radius:10px;
-   padding:10px;
-   margin:10px;
-   shadow:10px;
+    color: #FADBE6;
+    text-shadow: 2px 2px 4px #000000;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 30px;
+    shadow: 10px;
     font-size: 32px;
     background: rgba( 255, 255, 255, 0.4 );
     font-weight: bold;
-}
 
+}
