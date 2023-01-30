@@ -29,9 +29,11 @@ public class LevelController {
     String levelOverview(HttpSession session, Model model){
         Player player = (Player) session.getAttribute("gameLevel");
         List<GameLevel> levelList = (List)levelRepository.findAll();
+        int playerLevel = player.getGameLevel().getId().intValue();
 
         model.addAttribute("levelList", levelList);
         model.addAttribute("player", player);
+        model.addAttribute("playerLevel", playerLevel);
 
         return "levelPage";
     }

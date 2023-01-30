@@ -18,4 +18,6 @@ console.log("du har fel")
 }
 
 //x.innerHtml= "Du har tryckt på fel"
+
+
 }

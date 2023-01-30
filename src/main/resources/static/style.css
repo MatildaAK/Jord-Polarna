@@ -224,6 +224,11 @@ visibility:hidden !important;
     border: 1px;
 }
 
+.DisabledLevel{
+filter: grayscale(1);
+pointer-events: none;
+}
+
 @media (max-width: 800px) {
   .OuterBox {
     flex-direction: column;
