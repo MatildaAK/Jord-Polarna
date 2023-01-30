@@ -21,7 +21,7 @@
                     <form th:object="${gameLevel}" action="/register" method="POST">
                         Namn: <input class="Player" type="text" th:field="*{name}"/>
                         <input class="Player" type="hidden" th:if="${gameLevel.id != null}" th:field="*{id}"/>
-                        <input class="Player" type="submit" value="Spara spelare">
+                        <input class="PlayerInput" type="submit" value="Spara spelare">
                     </form>
                 </div>
             </div>

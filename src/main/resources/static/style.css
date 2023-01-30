@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
-/*Background Image*/
+/*Background Image startsida*/
 .hero-image {
   background-image: url("/images/background01.2.jpg "); /* The image used */
   background-color: #cccccc; /* Used if the image is unavailable */
@@ -12,7 +12,7 @@ body {
   background-size: cover; /* Resize the background image to cover the entire container */
 
 }
-/*Background Image*/
+/*Background Image level sida*/
 .hero-imagelvlstart {
   background-image: url("/images/school01.jpg "); /* The image used */
   background-color: #cccccc; /* Used if the image is unavailable */
@@ -22,7 +22,7 @@ body {
   background-size: cover; /* Resize the background image to cover the entire container */
 
 }
-/*Background Image*/
+/*Background Image level1*/
 .hero-imagelvl1 {
   background-image: url("/images/background01.2.jpg "); /* The image used */
   background-color: #cccccc; /* Used if the image is unavailable */
@@ -32,7 +32,7 @@ body {
   background-size: cover; /* Resize the background image to cover the entire container */
 
 }
-
+/*Background Image level2*/
 .hero-imagelvl2 {
   background-image: url("/images/cityview.png "); /* The image used */
   background-color: #cccccc; /* Used if the image is unavailable */
@@ -45,14 +45,12 @@ body {
 /* Create three equal columns that float next to each other */
 div.column {
     margin: 5px;
-    border: 1px solid #ccc;
     float: left;
-    width: 100px;
+    width: 300px;
     border-radius: 15px;
-
-     display: flex;
-      justify-content: center;
-      align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 /* When the mouse is over the image*/
@@ -99,7 +97,7 @@ div.column button {
   background-color: transparent;
   border-radius: 15px;
   padding: 20px;
-  justify-content: space-between;
+  justify-content: space-around;
 
 }
 
@@ -108,14 +106,23 @@ div.column button {
     top: 10px;
     left: 10px;
 }
-.Player{
+.PlayerInput{
      background-color: #FAEA7D;
+         height:40px;
+          width: 120px;
+          border-radius: 14px;
+          font-size: 14px;
+     }
 }
-.Player:hover{
+.PlayerInput:hover{
     background-color: #FAC952;
 }
 .startSida{
      background-color: #FADBE6;
+     height:80px;
+     width: 125px;
+     border-radius: 16px;
+     font-size: 28px;
 }
 .startSida:hover{
     background-color: #DFA3CD;
@@ -182,7 +189,7 @@ visibility:hidden !important;
     float: left;
     max-width: 150px;
     max-height: 150px;
-    background-color: #FAE7E6;
+    background-color: transparent;
     border: #FAE7E6;
 
 }
