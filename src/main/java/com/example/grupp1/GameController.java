@@ -45,10 +45,12 @@ public class GameController {
         playerRepository.save(sessionGameLevel);
         return "redirect:/levelOverview";
     }
+
     @GetMapping("/level1")
     String start(Model model, HttpSession session){
         Player player = (Player) session.getAttribute("gameLevel");
         List<Page> pages = pageRepository.findAllGameLvl(1L);
+        System.out.println(pages);
         int  currentPage = 1;
         List<Answer> answers = answerRepository.findAllFromPage(currentPage);
         System.out.println(answers);
@@ -64,21 +66,13 @@ public class GameController {
     }
 
     @PostMapping("/level1")
-    String answer(Model model, HttpSession session, @RequestParam int answer, @RequestParam int id){
+    String answer(Model model, HttpSession session){
         Player player = (Player) session.getAttribute("gameLevel");
-        List<Page> pages = pageRepository.findAllGameLvl(1L);
+        List<Page> pages = pageRepository.findAllGameLvl(1);
 
-        int currentPage = id;
+        int currentPage = (int)session.getAttribute("current");
+        currentPage++;
 
-        System.out.println("CORRECTANSWER: "+pages.get(id-1).getCorrectAnswer());
-        System.out.println("ANSWER: "+answer);
-        if (pages.get(id-1).getCorrectAnswer()==answer){
-            currentPage +=1;
-            System.out.println("Du svarade rätt.");
-
-        }else{
-            System.out.println("Du svara fel");
-        }
         List<Answer> answers = answerRepository.findAllFromPage(currentPage);
         model.addAttribute("answers", answers);
         model.addAttribute("player", player);

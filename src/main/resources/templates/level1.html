@@ -19,34 +19,41 @@
 <div th:each="page : ${pages}">
     <div id="" th:if="${page.id == session.current}">
         <p th:text="${page.question}"></p>
-
-        <form  action="/level1" method="POST">
-            <div class="BigBox">
-                <input type="hidden" name="id" th:value="${page.id}"/>
+        <div class="BigBox">
+            <input type="hidden" name="id" th:value="${page.id}"/>
             <div class="column" th:each="answer : ${answers}">
-                <button type="submit" class="ButtonInfo" name="answer" th:value="${answer.id}" width="400" height="400" th:data-name="${answer.id}" th:onclick="showId(this.getAttribute('data-name'))">
+                <button type="submit" class="ButtonInfo" name="answer" th:value="${answer.id}" width="400" height="400" th:attr="data-id=${answer.id},data-name=${page.correctAnswer}" th:onclick="showId(this.getAttribute('data-name'),this.getAttribute('data-id'))">
                     <img class="imageButton" width="100" height="100" th:src="@{/images/{id}(id=${answer.picture})}" alt="${answer.alt}">
-        </button>
-        </div>
+                </button>
             </div>
-        </form>
+        </div>
+
 
 
     </div>
 
     </div>
+
+
     </div>
 
 </tr>
 
-<!--<div id ="errormsg" class="hidden">
-    bla blabla
-</div>-->
 
+<div id="errorMsg" class="hidden res">
+    <p>Här har det blivit fel. Försök igen.</p>
+</div>
+        <form  action="/level1" method="POST">
+<div type="submit" id="correctRes" class="hidden res">
+    Bra jobbat! Nu kan du gå vidare genom att trycka här
+    <button type="submit" class="goButton">
+        <img width="50" height="50" th:src="@{/images/greenarrow.png}" alt="Grön pil">
+        </button>
+</div></form>
 
 
     </div>
-
+  
 </div>
     <div class="HomeButton">
         <a th:href="'/levelOverview'"><button class="startSida">Tillbaka</button></a>

@@ -1,5 +1,6 @@
 package com.example.grupp1.models;
 
+
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
@@ -18,7 +19,7 @@ public class Page {
     @ManyToOne
     private GameLevel gameLevel;
 
-    @OneToMany(mappedBy = "page", cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.EAGER,mappedBy = "page", cascade = CascadeType.ALL)
     List<Answer> answers = new ArrayList<>();
 
     public Page(Long id, String question, Long correctAnswer) {
@@ -69,4 +70,5 @@ public class Page {
     public void setAnswers(List<Answer> answers) {
         this.answers = answers;
     }
+
 }

@@ -15,6 +15,7 @@ public class Answer {
 
 
     @ManyToOne
+
     private Page page;
 
     public Answer() {
