@@ -33,7 +33,7 @@ INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('lekplats.png','Lekplats', 2)
 INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) VALUES ('batterikärl.png','Batterikärl', 3)
 INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('lekplats.png','Lekplats', 3)
 INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('plastkärl.png','Plastkärl', 3)
-INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('skräpkärl.png','Skräpkärl', 3)
+INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('skräpkärl.gif','Skräpkärl', 3)
 
 -- Answers question 4 lvl 1
 INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) VALUES ('batterikärl.png','batterikärl', 4)
