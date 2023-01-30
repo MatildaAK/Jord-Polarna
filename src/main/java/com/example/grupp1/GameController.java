@@ -74,9 +74,14 @@ public class GameController {
     String answer(Model model, HttpSession session){
         Player player = (Player) session.getAttribute("gameLevel");
         List<Page> pages = pageRepository.findAllGameLvl(1);
-
+        int amountQuestions = pages.size();
         int currentPage = (int)session.getAttribute("current");
-        currentPage++;
+        if(currentPage < amountQuestions){
+            currentPage++;
+        }else{
+            return "redirect:/levelOverview";
+        }
+
 
         List<Answer> answers = answerRepository.findAllFromPage(currentPage);
         model.addAttribute("answers", answers);
@@ -110,27 +115,18 @@ public class GameController {
     }
 
     @PostMapping("/level2")
-    String answerlvl2(Model model, HttpSession session, @RequestParam int answer, @RequestParam int id){
+    String answerlvl2(Model model, HttpSession session){
         Player player = (Player) session.getAttribute("gameLevel");
-        List<Page> pages = pageRepository.findAllGameLvl(2L);
+        List<Page> pages = pageRepository.findAllGameLvl(2);
 
-        int currentPage = id;
+        int currentPage = (int)session.getAttribute("current");
+        currentPage++;
 
-        System.out.println("CORRECTANSWER: "+pages.get(id-1).getCorrectAnswer());
-        System.out.println("ANSWER: "+answer);
-        if (pages.get(id-1).getCorrectAnswer()==answer){
-            currentPage +=1;
-            System.out.println("Du svarade rätt.");
-
-        }else{
-            System.out.println("Du svara fel");
-        }
         List<Answer> answers = answerRepository.findAllFromPage(currentPage);
         model.addAttribute("answers", answers);
         model.addAttribute("player", player);
         model.addAttribute("pages", pages);
         session.setAttribute("current", currentPage);
-
 
         return "level2";
     }
