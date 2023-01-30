@@ -4,46 +4,61 @@
   <link rel="stylesheet" href="../static/style.css" th:href="'/style.css'">
   <meta charset="UTF-8">
   <title>Hållbart resande</title>
+
+</head>
 <body>
-
 <div class="OuterBox">
-  <div class="hero-imagelvl2">
+  <div class="hero-image">
 
-    <h1 class="PlayerName ">Grattis  <a th:text="${player.name}" ></a>! Du är nu på nästa nivå!</h1>
+    <h1 class="PlayerName ">Grattis <a th:text="${player.name}" ></a>! Du är nu på nästa nivå!</h1>
 
     <div class="hero-text">
 
 
 
-      <tr th:each="page : ${pages}">
+      <div th:each="page : ${pages}">
         <div id="" th:if="${page.id == session.current}">
           <p th:text="${page.question}"></p>
-
-          <form  action="/level2" method="POST">
-            <div class="BigBox">
-              <input type="hidden" name="id" th:value="${page.id}"/>
-              <div class="column" th:each="answer : ${answers}">
-                <button type="submit" class="ButtonInfo" name="answer" th:value="${answer.id}" width="400" height="400" th:data-name="${answer.id}" th:onclick="showId(this.getAttribute('data-name'))">
-                  <img class="imageButton" width="100" height="100" th:src="@{/images/{id}(id=${answer.picture})}" alt="${answer.alt}">
-
-                </button>
-              </div>
-          </form>
-
+          <div class="BigBox">
+            <input type="hidden" name="id" th:value="${page.id}"/>
+            <div class="column" th:each="answer : ${answers}">
+              <button type="submit" class="ButtonInfo" name="answer" th:value="${answer.id}" width="400" height="400" th:attr="data-id=${answer.id},data-name=${page.correctAnswer}" th:onclick="showId(this.getAttribute('data-name'),this.getAttribute('data-id'))">
+                <img class="imageButton" width="100" height="100" th:src="@{/images/{id}(id=${answer.picture})}" alt="${answer.alt}">
+              </button>
+            </div>
+          </div>
 
 
 
         </div>
+
+      </div>
+
+
     </div>
 
     </tr>
 
-  </div>
-  <div class="HomeButton">
-    <a th:href="'/'"><button class="startSida">Startsida</button></a>
-  </div>
-</body>
 
+    <div id="errorMsg" class="hidden res">
+      <p>Här har det blivit fel. Försök igen.</p>
+    </div>
+    <form  action="/level2" method="POST">
+      <div type="submit" id="correctRes" class="hidden res">
+        Bra jobbat! Nu kan du gå vidare genom att trycka här
+        <button type="submit" class="goButton">
+          <img width="50" height="50" th:src="@{/images/greenarrow.png}" alt="Grön pil">
+        </button>
+      </div></form>
+
+
+  </div>
+
+</div>
+<div class="HomeButton">
+  <a th:href="'/levelOverview'"><button class="startSida">Tillbaka</button></a>
+</div>
+</body>
 
 <script type="text/javascript" th:src="@{action.js}"></script>
 </html>
