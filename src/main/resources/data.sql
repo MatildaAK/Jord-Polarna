@@ -3,11 +3,11 @@ INSERT INTO GAMELEVEL (NAME) VALUES ('LEVEL 2')
 INSERT INTO GAMELEVEL (NAME) VALUES ('LEVEL 3')
 
 -- Questions lvl 1
-INSERT INTO PAGE (QUESTION , CORRECTANSWER, GAME_LEVEL_ID) VALUES ( 'Oj! Här har någon slängt en glasburk i buskarna.   Vart ska glasburken egentligen slängas?', 2, 1)
+INSERT INTO PAGE (QUESTION , CORRECTANSWER, GAME_LEVEL_ID) VALUES ( 'Oj! Här har någon slängt en glasflaska i buskarna.    Vart ska glasflaskan egentligen slängas?', 2, 1)
 INSERT INTO PAGE (QUESTION , CORRECTANSWER, GAME_LEVEL_ID) VALUES ( 'Den här tomma plastflaskan ska inte vara här! Vart ska den tomma plastflaskan vara?', 7, 1)
 INSERT INTO PAGE (QUESTION , CORRECTANSWER, GAME_LEVEL_ID) VALUES ( 'Nämen, här har någon lagt batterier i en soptunna för matavfall. Vart borde batterierna slängas?',  9, 1)
-INSERT INTO PAGE (QUESTION , CORRECTANSWER, GAME_LEVEL_ID) VALUES ( 'Vad gör en tom kaviartub på skolgården? Här ska den ju inte vara! Den tomma kaviartuben ska vara i: ',  15, 1)
-INSERT INTO PAGE (QUESTION , CORRECTANSWER, GAME_LEVEL_ID) VALUES ( 'Det här glasspappret måste legat bredvid busskuren sedan snön smälte. Vi lägger det istället där det ska vara vilket är: ', 17, 1)
+INSERT INTO PAGE (QUESTION , CORRECTANSWER, GAME_LEVEL_ID) VALUES ( 'Vad gör en konservburk på skolgården? Här ska den ju inte vara! Konservburken ska slängas i: ',  15, 1)
+INSERT INTO PAGE (QUESTION , CORRECTANSWER, GAME_LEVEL_ID) VALUES ( 'Det här glasspappret måste legat bredvid busskuren sedan snön smälte. Vi slänger det istället i: ', 17, 1)
 
 -- Questions lvl 2
 INSERT INTO PAGE (QUESTION , CORRECTANSWER, GAME_LEVEL_ID) VALUES ( 'Upp och hoppa, det är strålande solsken och en ny veckodag! Hur ska vi ta oss till skolan idag? ', 21, 2)
