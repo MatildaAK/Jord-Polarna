@@ -10,10 +10,13 @@ if(correct == id){
 console.log("du har rätt")
 error.classList.add("hidden");
 correctMsg.classList.remove("hidden");
-   if (rightAnswer.paused || wrongAnswer.paused) {
+   if (rightAnswer.paused) {
+        wrongAnswer.currentTime = 0;
+        wrongAnswer.pause();
         rightAnswer.play();
     }else{
-        wrongAnswer.currentTime= 0;
+        wrongAnswer.currentTime = 0;
+        wrongAnswer.pause()
         rightAnswer.currentTime = 0;
     }
 }
@@ -23,9 +26,13 @@ error.classList.add("hidden")
 error.classList.remove("hidden");
 console.log("du har fel")
    if (wrongAnswer.paused) {
+        rightAnswer.currentTime = 0;
+        rightAnswer.pause();
         wrongAnswer.play();
     }else{
+        rightAnswer.currentTime=0;
+        rightAnswer.pause();
         wrongAnswer.currentTime = 0;
-    }
+       }
 }
 }
