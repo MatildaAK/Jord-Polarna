@@ -11,6 +11,14 @@
   <div class="hero-imagelvl2">
 
     <h1 class="PlayerName ">Grattis <a th:text="${player.name}" ></a>! Du är nu på nästa nivå!</h1>
+    <div id="PlayAudio"  >
+      <audio id="idAudio">
+        <source src="Audio/Rättsvar.mp4" type="audio/ogg">
+      </audio>
+      <button class="Speaker" onclick="play_Audio()" type="button">
+        <img src="images/speakers.png" alt="Speaker" width="50" height="50">
+      </button>
+    </div>
 
     <div class="hero-text">
 

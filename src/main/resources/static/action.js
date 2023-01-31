@@ -3,6 +3,12 @@ const coll = document.querySelector(".errormsg");
 var wrongAnswer = new Audio('audio/Felsvar.mp4');
 var rightAnswer = new Audio('audio/Rättsvar.mp4');
 
+/* Audio for the questions */
+var questionAudio = document.getElementById("idAudio");
+            function play_Audio() {
+            questionAudio.play();
+            }
+
 function showId(correct, id){
 var error = document.getElementById("errorMsg")
 var correctMsg = document.getElementById("correctRes")
