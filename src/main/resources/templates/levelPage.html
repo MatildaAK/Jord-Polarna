@@ -8,7 +8,7 @@
 <body>
 
     <div>
-        <div class="hero-imagelvlstart">
+        <div class="hero-imagelvlstart"></div>
             <h1 class="PlayerName ">Hej, <a th:text="${player.name}" ></a>!</h1>
             <div id="PlayAudio"  >
                 <audio id="idAudio">
@@ -34,14 +34,14 @@
                             </div>
                             <div th:if="${level.id > playerLevel}">
                                     <button type="submit" class="ButtonInfo DisabledLevel" th:value="${level.id}" width="300" height="300">
-                                        <img class="imageButton" width="300" height="300"  th:src="@{/images/level{id}.png(id=${level.id})}" th:value="${level.id}">
+                                        <img class="imageButton" width="200" height="200"  th:src="@{/images/level{id}.png(id=${level.id})}" th:value="${level.id}">
                                     </button>
                             </div>
                         </div>
                     </div>
                 </div>
 
-        </div>
+
 
     </div>
 
