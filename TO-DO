@@ -24,18 +24,6 @@ SPRINT 2 (tom tisdag 15:00, 31/1):
 - Beskrivning/syfte/instruktioner hur spelet fungerar på startsida. CAMILLA/MATILDA
 - Gruppnamn (till pitch på tisdag) - ALLA
 
-SPRINT 3:
-- Slutföra och finslipa level 1,2
-- Bygga level 3
-- Ljudelement i spelet (nice)
-- Unit test, minst 2
-- Poängräknare utifrån PAGE_ID
-- Filma/fotografera barn när de provar spelet, "produkttest" att ha med till presentationen.
-- Göra klart presentation
-- Städa kod, lägga in kommentarer
-- Öva! (Även i klassrummet på onsdag)
-
-
 30/1:
 - Låsa levels i levelsidan
 - Fixa CSS för felmeddelanden så det ser bättre ut
@@ -58,7 +46,44 @@ SPRINT 3:
 - Flaskcontainer
 - Lekplats
 
-
 Pitch 1300-1500:
 - Träna på pitchen
 - PP-presentation + punkter från PDF
+
+-------------------------
+SPRINT 3:
+
+MUST DO
+Level 1:
+- Byta ut ikoner
+- Få in ljud på frågorna.
+- Bild i frågan
+- Formulera om frågor(utefter det vi byter ut)
+- Eventuellt byta ut bakgrundsbild och då anpassa CSS efter det
+
+Level 2:
+- Ändra på frågor så att svaret blir tydligare
+- Få in ljud
+- Få ner svarsalternativen på vägen
+
+
+Allmänt:
+- Påbörja level 3
+- Unit test, minst 2
+- Diplom
+
+
+NICE TO DO
+- Poängräknare utifrån PAGE_ID
+- Städa kod, lägga in kommentarer
+
+INFÖR PRESENTATION FREDAG:
+- Powerpoint; ha liknande tema som i spelet så att det blir mer enhetliget
+- Powerpoint; få in mer bilder och anpassa texten
+- Dela in bättre
+- Öva! (Även i klassrummet på torsdag/fredag)
+- Filma/fotografera barn när de provar spelet, "produkttest" att ha med till presentationen.
+- Ha med barnens feedback och lägga stort fokus på testerna
+
+01/02:
+Fokus på must do delarna
