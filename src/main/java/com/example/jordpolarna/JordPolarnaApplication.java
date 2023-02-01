@@ -1,13 +1,13 @@
-package com.example.grupp1;
+package com.example.jordpolarna;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 //comment
 @SpringBootApplication
-public class Grupp1Application {
+public class JordPolarnaApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Grupp1Application.class, args);
+		SpringApplication.run(JordPolarnaApplication.class, args);
 	}
 
 }

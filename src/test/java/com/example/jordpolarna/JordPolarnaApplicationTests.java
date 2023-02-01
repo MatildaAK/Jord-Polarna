@@ -1,22 +1,20 @@
-package com.example.grupp1;
+package com.example.jordpolarna;
 
-import com.example.grupp1.models.Answer;
-import com.example.grupp1.models.GameLevel;
-import com.example.grupp1.models.Page;
-import com.example.grupp1.repository.AnswerRepository;
-import com.example.grupp1.repository.LevelRepository;
-import com.example.grupp1.repository.PageRepository;
-import com.example.grupp1.repository.PlayerRepository;
+import com.example.jordpolarna.models.Answer;
+import com.example.jordpolarna.models.GameLevel;
+import com.example.jordpolarna.repository.AnswerRepository;
+import com.example.jordpolarna.repository.LevelRepository;
+import com.example.jordpolarna.repository.PageRepository;
+import com.example.jordpolarna.repository.PlayerRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootTest
-class Grupp1ApplicationTests {
+class JordPolarnaApplicationTests {
 
 	@Autowired
 	private PageRepository pageRepository;

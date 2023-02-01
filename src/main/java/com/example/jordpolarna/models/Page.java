@@ -1,4 +1,4 @@
-package com.example.grupp1.models;
+package com.example.jordpolarna.models;
 
 import jakarta.persistence.*;
 import java.util.ArrayList;
