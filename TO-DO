@@ -64,16 +64,15 @@ Level 1:
 Level 2:
 - Ändra på frågor så att svaret blir tydligare - CHRISTIAN KLAR
 - Få in ljud - MOUTASEM KLAR
-- Få ner svarsalternativen på vägen - MATILDA
-
+- Få ner svarsalternativen på vägen - MATILDA KLAR
 
 Allmänt:
-- Unit test, minst 2 - LEOPOLD/MOUTASEM
-- Diplom - CAMILLA
+- Unit test, minst 2 - MOUTASEM KLAR
 - Ändra storlek på designen så att 100% ser bra ut - CAMILLA KLAR
-- Namnruta, "välj nivå"-ruta, sammanhängade storlek på bakgrunder - MATILDA
-- Ändra bakgrund för level 3 - CHRISTIAN
-- Ordna så att /level-sidorna ej går att nå via URL om de ej är slutförda - MOUTASEM.
+- Namnruta, "välj nivå"-ruta, sammanhängade storlek på bakgrunder - MATILDA KLAR
+- Ändra bakgrund för level 3 - CHRISTIAN KLAR
+- Ordna så att /level-sidorna ej går att nå via URL om de ej är slutförda - MOUTASEM KLAR
+- Diplom - CAMILLA
 
 
 NICE TO DO
@@ -91,3 +90,10 @@ INFÖR PRESENTATION FREDAG:
 
 01/02:
 Fokus på must do delarna
+
+TODO Torsdag 2/2:
+- Poängräknare utifrån PAGE_ID - CHRISTIAN
+- Städa kod, lägga in kommentarer
+- Diplom - CAMILLA
+- Sista finslipning
+- Presentation från 13:00
