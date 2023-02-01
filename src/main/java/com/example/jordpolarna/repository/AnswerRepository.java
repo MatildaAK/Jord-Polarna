@@ -1,7 +1,6 @@
-package com.example.grupp1.repository;
+package com.example.jordpolarna.repository;
 
-import com.example.grupp1.models.Answer;
-import com.example.grupp1.models.Page;
+import com.example.jordpolarna.models.Answer;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
