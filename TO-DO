@@ -55,30 +55,31 @@ SPRINT 3:
 
 MUST DO
 Level 1:
-- Byta ut ikoner
-- Få in ljud på frågorna.
-- Bild i frågan
+- Byta ut ikoner - LEOPOLD
+- Få in ljud på frågorna. - MOUTASEM
+- Bild i frågan - MATILDA
 - Formulera om frågor(utefter det vi byter ut)
-- Eventuellt byta ut bakgrundsbild och då anpassa CSS efter det
+- Eventuellt byta ut bakgrundsbild och då anpassa CSS efter det - KLAR
 
 Level 2:
-- Ändra på frågor så att svaret blir tydligare
-- Få in ljud
+- Ändra på frågor så att svaret blir tydligare - CHRISTIAN
+- Få in ljud - MOUTASEM
 - Få ner svarsalternativen på vägen
 
 
 Allmänt:
-- Påbörja level 3
 - Unit test, minst 2
-- Diplom
+- Diplom - CAMILLA
+- Ändra storlek på designen så att 100% ser bra ut - CAMILLA
 
 
 NICE TO DO
+- Påbörja level 3
 - Poängräknare utifrån PAGE_ID
 - Städa kod, lägga in kommentarer
 
 INFÖR PRESENTATION FREDAG:
-- Powerpoint; ha liknande tema som i spelet så att det blir mer enhetliget
+- Powerpoint; ha liknande tema som i spelet så att det blir mer enhetlighet
 - Powerpoint; få in mer bilder och anpassa texten
 - Dela in bättre
 - Öva! (Även i klassrummet på torsdag/fredag)
