@@ -86,3 +86,10 @@ presentation.play()}
 
 function playLvl(){
 level.play()}
+
+/*---Print---*/
+const printBtn = document.getElementById('print');
+
+printBtn.addEventListener('click', function() {
+    print();
+})

@@ -61,12 +61,7 @@ body {
     -webkit-filter: blur(2px);
 
 }
-/* Diplom sista sidan*/
-hero-certificate{
-    margin: 200px;
-    box-shadow: 2px 2px 4px black;
-    justify-content: center;
-}
+
 
 /* Create three equal columns that float next to each other */
 div.column {
@@ -339,4 +334,51 @@ pointer-events: none;
 .Speaker:hover {
    transform: scale(1.3);
    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+/*----------- Diplom sista sidan-------------------*/
+.diplom{
+   display:flex;
+   justify-content: center;
+   margin: auto;
+   width: 35%;
+   padding: 10px;
+}
+
+
+hero-certificate{
+    position: relative;
+    text-align: center;
+    color: black;
+}
+
+.nameDiplom{
+     position: absolute;
+     top: 51%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+}
+/*.PlayerName4{
+    display:flex;
+    background-color: transparent;
+    Color: black;
+    justify-content: center;
+    align-items: center;
+    top: 200px;
+
+}*/
+
+/* ---- Print-----*/
+@media print {
+    body * {
+
+    }
+    .HomeButton {
+        display:none;
+    }
+    #printContent, #printContent *{
+        display: block;
+    }
+    #print *{
+        display: block;
+    }
 }
