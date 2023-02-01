@@ -7,14 +7,14 @@
 
 </head>
 <body>
-
+<div class="OuterBox">
     <div class="hero-imagelvl1"></div>
 
         <h1 class="PlayerName ">Spelare:  <a th:text="${player.name}" ></a>!</h1>
 
         <div id="PlayAudio"  >
             <audio id="idAudio">
-                <source src="Audio/Presentation.mp4" type="audio/ogg">
+                <source src="Audio/q1lvl1.mp4" type="audio/ogg">
             </audio>
             <button class="Speaker" onclick="play_Audio()" type="button">
             <img src="images/speakers.png" alt="Speaker" width="50" height="50">
@@ -28,13 +28,14 @@
                 <div id="" th:if="${page.id == session.current}">
 
                 <div class="question1">
+                    <img class="QuestionImage" width="150" height="150" th:src="@{/images/{id}(id=${page.image})}">
                     <h2  th:text="${page.question}"></h2>
                 </div>
 
                      <div class="BigBox">
                      <input type="hidden" name="id" th:value="${page.id}"/>
                          <div class="column" th:each="answer : ${answers}">
-                         <button type="submit" class="ButtonInfo" name="answer" th:value="${answer.id}" width="400" height="400" th:attr="data-id=${answer.id},data-name=${page.correctAnswer}" th:onclick="showId(this.getAttribute('data-name'),this.getAttribute('data-id'))">
+                         <button type="submit" class="ButtonInfo" name="answer" th:value="${answer.id}" width="200" height="200" th:attr="data-id=${answer.id},data-name=${page.correctAnswer}" th:onclick="showId(this.getAttribute('data-name'),this.getAttribute('data-id'))">
                          <img class="imageButton" width="200" height="200" th:src="@{/images/{id}(id=${answer.picture})}" alt="${answer.alt}">
                          </button>
                         </div>
@@ -42,7 +43,7 @@
                 </div>
             </div>
         </div>
-
+</div>
 
 
 

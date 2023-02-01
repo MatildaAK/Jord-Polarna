@@ -90,11 +90,8 @@ public class GameController {
         model.addAttribute("player", player);
         model.addAttribute("pages", pages);
         session.setAttribute("current", currentPage);
-
-
         return "level1";
     }
-
 
     @GetMapping("/level2")
     String lvl2(Model model, HttpSession session){
@@ -137,6 +134,53 @@ public class GameController {
 
         return "level2";
     }
+    @GetMapping("/level3")
+    String lvl3(Model model, HttpSession session){
+        Player player = (Player) session.getAttribute("gameLevel");
+        List<Page> pages = pageRepository.findAllGameLvl(3L);
+        int currentPage = 9;
+        List<Answer> answers = answerRepository.findAllFromPage(currentPage);
+        System.out.println(answers);
 
 
+        session.setAttribute("current", currentPage);
+        model.addAttribute("player", player);
+        model.addAttribute("pages", pages);
+        model.addAttribute("answers", answers);
+        model.addAttribute("currentPage", currentPage);
+
+
+
+        return "level3";
+    }
+
+    @PostMapping("/level3")
+    String answerlvl3(Model model, HttpSession session){
+        Player player = (Player) session.getAttribute("gameLevel");
+        List<Page> pages = pageRepository.findAllGameLvl(3);
+        int amountQuestions = pages.size()+5;
+        int currentPage = (int)session.getAttribute("current");
+        if(currentPage < amountQuestions){
+            currentPage++;
+        }else{
+            player.setGameLevel(levelRepository.findById(4L).get());
+            playerRepository.save(player);
+            return "redirect:/levelOverview";
+        }
+
+
+        List<Answer> answers = answerRepository.findAllFromPage(currentPage);
+        model.addAttribute("answers", answers);
+        model.addAttribute("player", player);
+        model.addAttribute("pages", pages);
+        session.setAttribute("current", currentPage);
+
+        return "level3";
+    }
+    @GetMapping("/diplom")
+    String diplom(Model model, HttpSession session){
+        Player player = (Player) session.getAttribute("gameLevel");
+        model.addAttribute("player", player);
+        return "diplom";
+    }
 }

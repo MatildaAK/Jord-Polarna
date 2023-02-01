@@ -10,6 +10,14 @@
     <div>
         <div class="hero-imagelvlstart"></div>
             <h1 class="PlayerName ">Hej, <a th:text="${player.name}" ></a>!</h1>
+            <div id="PlayAudio"  >
+                <audio id="idAudio">
+                    <source src="Audio/Rättsvar.mp4" type="audio/ogg">
+                </audio>
+                <button class="Speaker" onclick="play_Audio()" type="button">
+                    <img src="images/speakers.png" alt="Speaker" width="50" height="50">
+                </button>
+            </div>
                 <div class="hero-text">
 
                     <div>
@@ -19,14 +27,14 @@
                         <div class="column" th:each="level : ${levelList}">
                             <div th:if="${level.id <= playerLevel}">
                                 <a th:href="'/level' + ${level.id}">
-                                <button type="submit" class="ButtonInfo"  th:value="${level.id}" width="300" height="300">
-                                     <img class="imageButton" width="300" height="300"  th:src="@{/images/level{id}.png(id=${level.id})}" th:value="${level.id}">
+                                <button type="submit" class="ButtonInfo"  th:value="${level.id}" width="200" height="200">
+                                     <img class="imageButton" width="200" height="200"  th:src="@{/images/level{id}.png(id=${level.id})}" th:value="${level.id}">
                                 </button>
                                 </a>
                             </div>
                             <div th:if="${level.id > playerLevel}">
-                                    <button type="submit" class="ButtonInfo DisabledLevel" th:value="${level.id}" width="300" height="300">
-                                        <img class="imageButton" width="300" height="300"  th:src="@{/images/level{id}.png(id=${level.id})}" th:value="${level.id}">
+                                    <button type="submit" class="ButtonInfo DisabledLevel" th:value="${level.id}" width="200" height="200">
+                                        <img class="imageButton" width="200" height="200"  th:src="@{/images/level{id}.png(id=${level.id})}" th:value="${level.id}">
                                     </button>
                             </div>
                         </div>
