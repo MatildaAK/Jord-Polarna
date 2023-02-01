@@ -77,7 +77,6 @@ INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('kiwi.gif','Kiwi', 9)
 INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('päron.png','Päron', 9)
 INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('avocado.gif','Avocado', 9)
 
-
 -- Answers question 2 lvl 3 TEST
 INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) VALUES ('vattenmelon.gif','Vattenmelon', 10)
 INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('bananskal.gif','Bananskal', 10)
