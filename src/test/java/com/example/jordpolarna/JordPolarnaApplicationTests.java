@@ -2,6 +2,7 @@ package com.example.jordpolarna;
 
 import com.example.jordpolarna.models.Answer;
 import com.example.jordpolarna.models.GameLevel;
+import com.example.jordpolarna.models.Page;
 import com.example.jordpolarna.repository.AnswerRepository;
 import com.example.jordpolarna.repository.LevelRepository;
 import com.example.jordpolarna.repository.PageRepository;
@@ -10,7 +11,9 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.jpa.repository.Query;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootTest
@@ -41,6 +44,21 @@ class JordPolarnaApplicationTests {
 		List<GameLevel> list = (List)levelRepository.findById(1L).get();
 		Assertions.assertEquals("Sandlåda", list);
 	}
+
+	//LEOPOLD FORTSÄTTER I EFTERMIDDAG.
+	/*@Test
+	void testFindAllFromPage() {
+
+		@Query("SELECT * FROM ANSWER WHERE PAGE_ID = :PAGE_ID", nativeQuery = true)
+		List<Answer> findAllFromPage(int i)
+
+		List<Answer> testAnswerList = new ArrayList<>();
+		Answer testAnswer01 = answerRepository.save(new Answer(1L, "testbild01.png", "Testbild01"));
+
+		testAnswerList.add(testAnswer01);
+
+		Assertions.assertEquals("Sandlåda", );
+	}*/
 
 	@Test
 	void findAllPagesinLevelOne(){
