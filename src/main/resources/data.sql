@@ -79,7 +79,7 @@ INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('avocado.gif','Avocado', 9)
 
 -- Answers question 2 lvl 3 TEST
 INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) VALUES ('vattenmelon.gif','Vattenmelon', 10)
-INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('bananskal.gif','Bananskal', 10)
+INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('bananskal.png','Bananskal', 10)
 INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('jordgubbe.gif','jordgubbe', 10)
 INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('äpple.gif','Äpple', 10)
 
