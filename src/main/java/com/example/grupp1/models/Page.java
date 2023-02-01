@@ -16,6 +16,8 @@ public class Page {
     String question;
     @Column(name = "CORRECTANSWER")
     Long correctAnswer;
+    @Column(name = "IMAGE")
+    String image;
     @ManyToOne
     private GameLevel gameLevel;
 
@@ -23,14 +25,19 @@ public class Page {
     List<Answer> answers = new ArrayList<>();
 
 
-    public Page(Long id, String question, Long correctAnswer) {
+    public Page(Long id, String question, Long correctAnswer, String image) {
         this.id = id;
         this.question = question;
         this.correctAnswer = correctAnswer;
+        this.image = image;
     }
 
     public Page() {
     }
+
+    public String getImage() {return image;}
+
+    public void setImage(String image) {this.image = image;}
 
     public Long getId() {
         return id;

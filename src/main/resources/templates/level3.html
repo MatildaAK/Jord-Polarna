@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <link rel="stylesheet" href="../static/style.css" th:href="'/style.css'">
+  <meta charset="UTF-8">
+  <title>Hållbar mat</title>
+
+</head>
+<body>
+<div class="OuterBox">
+  <div class="hero-imagelvl3"></div>
+
+  <h1 class="PlayerName ">Spelare:  <a th:text="${player.name}" ></a>!</h1>
+
+  <div id="PlayAudio"  >
+    <audio id="idAudio">
+      <source src="Audio/Presentation.mp4" type="audio/ogg">
+    </audio>
+    <button class="Speaker" onclick="play_Audio()" type="button">
+      <img src="images/speakers.png" alt="Speaker" width="50" height="50">
+    </button>
+  </div>
+  <div class="hero-text">
+
+
+
+    <div th:each="page : ${pages}">
+      <div id="" th:if="${page.id == session.current}">
+
+        <div class="question2">
+          <h2  th:text="${page.question}"></h2>
+        </div>
+
+        <div class="BigBox">
+          <input type="hidden" name="id" th:value="${page.id}"/>
+          <div class="column" th:each="answer : ${answers}">
+            <button type="submit" class="ButtonInfo" name="answer" th:value="${answer.id}" width="400" height="400" th:attr="data-id=${answer.id},data-name=${page.correctAnswer}" th:onclick="showId(this.getAttribute('data-name'),this.getAttribute('data-id'))">
+              <img class="imageButton" width="200" height="200" th:src="@{/images/{id}(id=${answer.picture})}" alt="${answer.alt}">
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+</tr>
+
+
+<div id="errorMsg" class="hidden res">
+  <p>Här har det blivit fel. Försök igen.</p>
+</div>
+<form  action="/level3" method="POST">
+  <div type="submit" id="correctRes" class="hidden res">
+    <div class="buttonRow">
+      <p> Bra jobbat! Gå vidare genom att trycka här</p>
+      <button type="submit" class="goButton">
+        <img width="50" height="50" th:src="@{/images/greenarrow.png}" alt="Grön pil">
+      </button>
+    </div>
+  </div>
+</form>
+
+
+</div>
+
+</div>
+<div class="HomeButton">
+  <a th:href="'/levelOverview'"><button class="startSida">Tillbaka</button></a>
+</div>
+</body>
+
+<script type="text/javascript" th:src="@{action.js}"></script>
+
+
+</body>
+</html>

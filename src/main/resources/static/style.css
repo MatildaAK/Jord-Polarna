@@ -52,6 +52,18 @@ body {
     -webkit-filter: blur(2px);
 
 }
+/*Background Image level3*/
+.hero-imagelvl3 {
+  background-image: url("/images/blommor.png "); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  height: 750px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  filter: blur(2px);
+    -webkit-filter: blur(2px);
+
+}
 
 /* Create three equal columns that float next to each other */
 div.column {
@@ -98,6 +110,7 @@ div.column button {
   padding: 20px;
 
 }
+
 .hero-text {
   text-align: center;
   position: absolute;
@@ -119,7 +132,8 @@ div.column button {
 }
 .Player{
      font-size: 14px;
-}
+}t
+/* Save the name */
 .PlayerInput{
      background-color: #FAEA7D;
          height:40px;
@@ -128,9 +142,11 @@ div.column button {
           font-size: 14px;
      }
 }
-.PlayerInput:hover{
+
+.PlayerInput : hover{
     background-color: #FAC952;
 }
+/* tillbaka / startsida */
 .startSida{
      background-color: #FADBE6;
      height:80px;
@@ -207,6 +223,13 @@ visibility:hidden !important;
     border: #FAE7E6;
 
 }
+/* Image connected to the question*/
+.QuestionImage{
+    float: center;
+    max-width: 150px;
+    max-height: 150px;
+    background-color: transparent;
+}
 .clearfix{
     overflow: auto;
 }
@@ -253,7 +276,7 @@ pointer-events: none;
     flex-direction: column;
     }
 }
-
+/* Text and box around question lvl1*/
 .question1{
     color: #DFA3CD;
     text-shadow: 2px 2px 4px #000000;
@@ -262,11 +285,13 @@ pointer-events: none;
     margin: 30px;
     shadow: 10px;
     font-size: 30px;
-    background: rgba( 255, 255, 255, 0.4 );
+    background: rgba( 255, 255, 255, 0.7 );
     font-weight: bold;
+
 }
+/* Text and box around question lvl2*/
 .question2{
-    color: #B2E0B1;
+    color: #5095F5;
     text-shadow: 2px 2px 4px #000000;
     border-radius: 10px;
     padding: 10px;
