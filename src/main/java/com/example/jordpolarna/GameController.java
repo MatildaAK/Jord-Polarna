@@ -175,7 +175,7 @@ public class GameController {
 
         return "level3";
     }
-    @GetMapping("/diplom")
+    @GetMapping("/level4")
     String diplom(Model model, HttpSession session){
         Player player = (Player) session.getAttribute("gameLevel");
         model.addAttribute("player", player);
