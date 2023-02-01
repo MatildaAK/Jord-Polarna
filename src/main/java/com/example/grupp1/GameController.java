@@ -111,8 +111,6 @@ public class GameController {
         model.addAttribute("answers", answers);
         model.addAttribute("currentPage", currentPage);
 
-
-
         return "level2";
     }
 

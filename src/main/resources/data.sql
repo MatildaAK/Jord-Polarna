@@ -10,9 +10,9 @@ INSERT INTO PAGE (QUESTION , CORRECTANSWER, GAME_LEVEL_ID) VALUES ( 'Vad gör en
 INSERT INTO PAGE (QUESTION , CORRECTANSWER, GAME_LEVEL_ID) VALUES ( 'Det här glasspappret måste legat bredvid busskuren sedan snön smälte. Vi slänger det istället i: ', 17, 1)
 
 -- Questions lvl 2
-INSERT INTO PAGE (QUESTION , CORRECTANSWER, GAME_LEVEL_ID) VALUES ( 'Upp och hoppa, det är strålande solsken och en ny veckodag! Hur ska vi ta oss till skolan idag? ', 21, 2)
-INSERT INTO PAGE (QUESTION , CORRECTANSWER, GAME_LEVEL_ID) VALUES ( 'Det är så många kompisar vi vill träffa och prata med! Hur kan vi göra det när vi är på till skolan eller på väg hem från skolan? ', 28, 2)
-INSERT INTO PAGE (QUESTION , CORRECTANSWER, GAME_LEVEL_ID) VALUES ( 'Äntligen helg och nu ska vi iväg på fotbollsmatch med laget! Matchen ligger en bit bort från där vi bor. Hur tar vi oss till fotbollsmatchen? ',  31, 2)
+INSERT INTO PAGE (QUESTION , CORRECTANSWER, GAME_LEVEL_ID) VALUES ( 'Det är inte så långt till vår skola, men inte heller tillräckligt nära för att promenera. Hur tar vi oss till skolan? ', 21, 2)
+INSERT INTO PAGE (QUESTION , CORRECTANSWER, GAME_LEVEL_ID) VALUES ( 'Våra kompisar frågar om vi vill följa med till biblioteket som ligger tvärs över gatan. Hur tar vi oss till biblioteket? ', 28, 2)
+INSERT INTO PAGE (QUESTION , CORRECTANSWER, GAME_LEVEL_ID) VALUES ( 'Vi ska iväg på fotbollsmatch med laget. Matchen spelas i en annan stad. Hur tar vi oss till fotbollsmatchen? ',  30, 2)
 
 -- Questions lvl 3
 INSERT INTO PAGE (QUESTION , CORRECTANSWER, GAME_LEVEL_ID) VALUES ( 'TEST ',  31, 3)
@@ -56,14 +56,14 @@ INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('buss.png','Buss', 6)
 -- Answers question 2 lvl 2 TEST
 INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) VALUES ('flygplan.png','Flygplan', 7)
 INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('bil.png','Bil', 7)
-INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('tåg.png','Tåg', 7)
-INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('promenera.png','Promenad', 7)
+INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('buss.png','Buss', 7)
+INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('barnpromenerar.png','Promenad', 7)
 
 -- Answers question 3 lvl 2 TEST
-INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) VALUES ('buss.png','Buss', 8)
+INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) VALUES ('luftballong.png','Luftballong', 8)
 INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('tåg.png','Tåg', 8)
 INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('cykel.png','Cykel', 8)
-INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('bil.png','Bil', 8)
+INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('promenera.png','Promenad', 8)
 
 
 
