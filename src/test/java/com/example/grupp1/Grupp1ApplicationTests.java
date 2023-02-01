@@ -12,7 +12,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootTest
@@ -46,7 +45,7 @@ class Grupp1ApplicationTests {
 
 	@Test
 	void findAllPagesinLevelOne(){
-		List<Page> pages = pageRepository.findAllGameLvl(1l);
+		List<Page> pages = pageRepository.findAllPagesFromGameLvl(1l);
 		// Testar att listan vi får har rätt size på lvl 1
 		Assertions.assertEquals(5, pages.size());
 
@@ -62,7 +61,7 @@ class Grupp1ApplicationTests {
 	}
 		@Test
 		void findAllPagesinLevelTwo(){
-			List<Page> pages = pageRepository.findAllGameLvl(2l);
+			List<Page> pages = pageRepository.findAllPagesFromGameLvl(2l);
 			// Testar att listan vi får har rätt size på lvl 2
 			Assertions.assertEquals(3, pages.size());
 

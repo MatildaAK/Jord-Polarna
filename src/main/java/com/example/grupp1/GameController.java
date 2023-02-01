@@ -3,10 +3,7 @@ package com.example.grupp1;
 import com.example.grupp1.models.Answer;
 import com.example.grupp1.models.Page;
 import com.example.grupp1.models.Player;
-import com.example.grupp1.repository.AnswerRepository;
-import com.example.grupp1.repository.LevelRepository;
-import com.example.grupp1.repository.PageRepository;
-import com.example.grupp1.repository.PlayerRepository;
+import com.example.grupp1.repository.*;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,7 +11,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -22,47 +18,42 @@ import java.util.List;
 public class GameController {
 
     @Autowired
-    private PlayerRepository playerRepository;
-    @Autowired
-    private PageRepository pageRepository;
-    @Autowired
     private AnswerRepository answerRepository;
-
     @Autowired
     private LevelRepository levelRepository;
+    @Autowired
+    private PageService pageService;
+    @Autowired
+    private PlayerService playerService;
 
     @GetMapping("/")
-    String reg(HttpSession session,  Model model){
-        if(session.getAttribute("gameLevel") == null) {
-            Player player = playerRepository.save(new Player());
-            session.setAttribute("gameLevel", player);
+    String reg(HttpSession session,  Model model) {
+        Player player = null;
+        if (session.getAttribute("gameLevel") == null) {
+            player = new Player();
+        } else {
+            return "redirect:/levelOverview";
         }
-        model.addAttribute("gameLevel", session.getAttribute("gameLevel"));
+        model.addAttribute("player", player);
         return "index";
     }
 
     @PostMapping("/register")
     String register(HttpSession session, Model model, @ModelAttribute Player player) {
-        Player sessionGameLevel = (Player) session.getAttribute("gameLevel");
-        sessionGameLevel.setName(player.getName());
-        sessionGameLevel.setGameLevel(levelRepository.findById(1L).get()); //Hämtar level-id för framtida upplåsning av nya levels.
-        model.addAttribute("gameLevel", session.getAttribute("gameLevel"));
-        playerRepository.save(sessionGameLevel);
+        playerService.saveNewPlayer(player.getName());
+        session.setAttribute("gameLevel", playerService.getPlayer(player.getName()));
         return "redirect:/levelOverview";
     }
 
     @GetMapping("/level1")
     String start(Model model, HttpSession session){
         Player player = (Player) session.getAttribute("gameLevel");
-        List<Page> pages = pageRepository.findAllGameLvl(1L);
-        System.out.println(pages);
-        int  currentPage = 1;
-        //int currentID = pages.get(currentPage-1).getId().intValue();
+        List<Page> pages = pageService.getAllPagesFromLevel(1);
+
+        int  currentPage = pageService.getFirstPageFromLevel(1);
         List<Answer> answers = answerRepository.findAllFromPage(currentPage);
-        System.out.println(answers);
-
-
         session.setAttribute("current", currentPage);
+
         model.addAttribute("player", player);
         model.addAttribute("pages", pages);
         model.addAttribute("answers", answers);
@@ -74,14 +65,15 @@ public class GameController {
     @PostMapping("/level1")
     String answer(Model model, HttpSession session){
         Player player = (Player) session.getAttribute("gameLevel");
-        List<Page> pages = pageRepository.findAllGameLvl(1);
+        List<Page> pages = pageService.getAllPagesFromLevel(1);
         int amountQuestions = pages.size();
         int currentPage = (int)session.getAttribute("current");
         if(currentPage < amountQuestions){
             currentPage++;
         }else{
             player.setGameLevel(levelRepository.findById(2L).get());
-            playerRepository.save(player);
+            playerService.savePlayer(player);
+
             return "redirect:/levelOverview";
         }
 
@@ -97,8 +89,12 @@ public class GameController {
     @GetMapping("/level2")
     String lvl2(Model model, HttpSession session){
         Player player = (Player) session.getAttribute("gameLevel");
-        List<Page> pages = pageRepository.findAllGameLvl(2L);
-        int currentPage = 6;
+            if(player.getGameLevel().getId() < 2L){
+                return "redirect:/levelOverview";
+            }
+
+        List<Page> pages = pageService.getAllPagesFromLevel(2);
+        int currentPage = pageService.getFirstPageFromLevel(2);
         List<Answer> answers = answerRepository.findAllFromPage(currentPage);
         System.out.println(answers);
 
@@ -115,14 +111,15 @@ public class GameController {
     @PostMapping("/level2")
     String answerlvl2(Model model, HttpSession session){
         Player player = (Player) session.getAttribute("gameLevel");
-        List<Page> pages = pageRepository.findAllGameLvl(2);
-        int amountQuestions = pages.size()+5;
+        List<Page> pages = pageService.getAllPagesFromLevel(2);
+        int amountQuestions = pageService.getTotalAmountOfQuestionsSoFar(2);
         int currentPage = (int)session.getAttribute("current");
         if(currentPage < amountQuestions){
             currentPage++;
         }else{
             player.setGameLevel(levelRepository.findById(3L).get());
-            playerRepository.save(player);
+            playerService.savePlayer(player);
+
             return "redirect:/levelOverview";
         }
 
@@ -138,11 +135,14 @@ public class GameController {
     @GetMapping("/level3")
     String lvl3(Model model, HttpSession session){
         Player player = (Player) session.getAttribute("gameLevel");
-        List<Page> pages = pageRepository.findAllGameLvl(3L);
-        int currentPage = 9;
-        List<Answer> answers = answerRepository.findAllFromPage(currentPage);
-        System.out.println(answers);
+        List<Page> pages = pageService.getAllPagesFromLevel(3);
 
+        int currentPage = pageService.getFirstPageFromLevel(3);
+        List<Answer> answers = answerRepository.findAllFromPage(currentPage);
+
+        if(player.getGameLevel().getId() < 3L){
+            return "redirect:/levelOverview";
+        }
 
         session.setAttribute("current", currentPage);
         model.addAttribute("player", player);
@@ -156,14 +156,15 @@ public class GameController {
     @PostMapping("/level3")
     String answerlvl3(Model model, HttpSession session){
         Player player = (Player) session.getAttribute("gameLevel");
-        List<Page> pages = pageRepository.findAllGameLvl(3);
-        int amountQuestions = pages.size()+8;
+        List<Page> pages = pageService.getAllPagesFromLevel(3);
+        int amountQuestions = pageService.getTotalAmountOfQuestionsSoFar(3);
         int currentPage = (int)session.getAttribute("current");
         if(currentPage < amountQuestions){
             currentPage++;
         }else{
             player.setGameLevel(levelRepository.findById(4L).get());
-            playerRepository.save(player);
+            playerService.savePlayer(player);
+
             return "redirect:/levelOverview";
         }
 
@@ -182,4 +183,11 @@ public class GameController {
         model.addAttribute("player", player);
         return "diplom";
     }
+
+    @GetMapping("/nyspelare")
+    public String logout(HttpSession session) {
+        session.invalidate();
+        return "redirect:/";
+    }
+
 }

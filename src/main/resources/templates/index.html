@@ -24,9 +24,9 @@
                     <br> Jord-Polarna vänder sig till barn som vill lära sig mer om hur man kan hjälpa jorden att må bättre och att den ska klara sig längre.
                     <br>
                     <h3>Skriv in ditt namn för att börja spela</h3>
-                    <form th:object="${gameLevel}" action="/register" method="POST">
+                    <form th:object="${player}" action="/register" method="POST">
                         Namn: <input class="Player" type="text" th:field="*{name}"/>
-                        <input class="Player" type="hidden" th:if="${gameLevel.id != null}" th:field="*{id}"/>
+                        <input class="Player" type="hidden" th:if="${player.id != null}" th:field="*{id}"/>
                         <input class="PlayerInput" type="submit" value="Spara spelare">
                     </form>
                 </div>
