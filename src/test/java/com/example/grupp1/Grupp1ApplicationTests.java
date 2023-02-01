@@ -3,8 +3,10 @@ package com.example.grupp1;
 import com.example.grupp1.models.Answer;
 import com.example.grupp1.models.GameLevel;
 import com.example.grupp1.models.Page;
+import com.example.grupp1.repository.AnswerRepository;
 import com.example.grupp1.repository.LevelRepository;
 import com.example.grupp1.repository.PageRepository;
+import com.example.grupp1.repository.PlayerRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +21,11 @@ class Grupp1ApplicationTests {
 	@Autowired
 	private PageRepository pageRepository;
 	@Autowired
-	LevelRepository levelRepository;
+	private LevelRepository levelRepository;
+	@Autowired
+	private AnswerRepository answerRepository;
+	@Autowired
+	private PlayerRepository playerRepository;
 
 	@Test
 	void contextLoads() {
