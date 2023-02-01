@@ -3,42 +3,76 @@ const coll = document.querySelector(".errormsg");
 var wrongAnswer = new Audio('audio/Felsvar.mp4');
 var rightAnswer = new Audio('audio/Rättsvar.mp4');
 
+const allAudio = [];
 /* Audio for the questions */
-var questionAudio = document.getElementById("idAudio");
-            function play_Audio() {
-            questionAudio.play();
-            }
+var questionAudio1 = new Audio('audio/q1lvl1.mp4');
+var questionAudio2 = new Audio('audio/q2lvl1.mp4');
+var questionAudio3 = new Audio('audio/q3lvl1.mp4');
+var questionAudio4 = new Audio('audio/q4lvl1.mp4');
+var questionAudio5 = new Audio('audio/q5lvl1.mp4');
+var questionAudio6 = new Audio('audio/q1lvl2.mp4');
+var questionAudio7 = new Audio('audio/q2lvl2.mp4');
+var questionAudio8 = new Audio('audio/q3lvl2.mp4');
+allAudio.push(questionAudio1, questionAudio2, questionAudio3, questionAudio4, questionAudio5, questionAudio6,questionAudio7,questionAudio8);
+
+
+
+function pauseAudio(audio) {
+    audio.pause();
+    audio.currentTime = 0;
+}
+
+function play_Audio(id) {
+
+this.currentID = id;
+pauseAudio(rightAnswer);
+pauseAudio(wrongAnswer);
+if(id ==1){
+questionAudio1.play();
+    }else if(id ==2){
+    questionAudio2.play()
+    }else if(id ==3){
+    questionAudio3.play()
+    }else if(id ==4){
+    questionAudio4.play()
+    }else if (id ==5){
+    questionAudio5.play()}
+    else if (id ==6){
+    questionAudio6.play()}
+    else if (id ==7){
+    questionAudio7.play()}
+    else if (id ==8){
+    questionAudio8.play()}
+}
+
+
 
 function showId(correct, id){
+console.log("allaudio ", allAudio);
+allAudio.forEach(audio => pauseAudio(audio));
 var error = document.getElementById("errorMsg")
 var correctMsg = document.getElementById("correctRes")
 if(correct == id){
-console.log("du har rätt")
 error.classList.add("hidden");
 correctMsg.classList.remove("hidden");
    if (rightAnswer.paused) {
-        wrongAnswer.currentTime = 0;
-        wrongAnswer.pause();
-        rightAnswer.play();
+   pauseAudio(wrongAnswer);
+    rightAnswer.play();
     }else{
-        wrongAnswer.currentTime = 0;
-        wrongAnswer.pause()
-        rightAnswer.currentTime = 0;
+    pauseAudio(wrongAnswer);
+    rightAnswer.currentTime = 0;
     }
 }
 else{
 correctMsg.classList.add("hidden");
 error.classList.add("hidden")
 error.classList.remove("hidden");
-console.log("du har fel")
    if (wrongAnswer.paused) {
-        rightAnswer.currentTime = 0;
-        rightAnswer.pause();
-        wrongAnswer.play();
+    pauseAudio(rightAnswer)
+    wrongAnswer.play();
     }else{
-        rightAnswer.currentTime=0;
-        rightAnswer.pause();
-        wrongAnswer.currentTime = 0;
-       }
+    pauseAudio(rightAnswer);
+    wrongAnswer.currentTime = 0;
+   }
 }
 }

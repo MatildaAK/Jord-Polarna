@@ -57,6 +57,7 @@ public class GameController {
         List<Page> pages = pageRepository.findAllGameLvl(1L);
         System.out.println(pages);
         int  currentPage = 1;
+        //int currentID = pages.get(currentPage-1).getId().intValue();
         List<Answer> answers = answerRepository.findAllFromPage(currentPage);
         System.out.println(answers);
 
@@ -158,7 +159,7 @@ public class GameController {
     String answerlvl3(Model model, HttpSession session){
         Player player = (Player) session.getAttribute("gameLevel");
         List<Page> pages = pageRepository.findAllGameLvl(3);
-        int amountQuestions = pages.size()+5;
+        int amountQuestions = pages.size()+8;
         int currentPage = (int)session.getAttribute("current");
         if(currentPage < amountQuestions){
             currentPage++;
