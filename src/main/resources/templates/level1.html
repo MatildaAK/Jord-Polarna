@@ -32,7 +32,7 @@
                      <input type="hidden" name="id" th:value="${page.id}"/>
                          <div class="column" th:each="answer : ${answers}">
                          <button type="submit" class="ButtonInfo" name="answer" th:value="${answer.id}" width="400" height="400" th:attr="data-id=${answer.id},data-name=${page.correctAnswer}" th:onclick="showId(this.getAttribute('data-name'),this.getAttribute('data-id'))">
-                         <img class="imageButton" width="200" height="200" th:src="@{/images/{id}(id=${answer.picture})}" alt="${answer.alt}">
+                         <img class="imageButton" width="200" height="200" th:src="@{/images/{id}(id=${answer.picture})}" th:alt="${answer.alt}">
                          </button>
                         </div>
                      </div>
@@ -50,7 +50,7 @@
     <p>Här har det blivit fel. Försök igen.</p>
 </div>
         <form  action="/level1" method="POST">
-<div type="submit" id="correctRes" class="hidden res">
+<div type="submit" id="correctRes" class="hidden correctRes">
     <div class="buttonRow">
         <p> Bra jobbat! Gå vidare genom att trycka här</p>
         <button type="submit" class="goButton">
