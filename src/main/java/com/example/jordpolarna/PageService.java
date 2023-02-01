@@ -1,7 +1,7 @@
-package com.example.grupp1;
+package com.example.jordpolarna;
 
-import com.example.grupp1.models.Page;
-import com.example.grupp1.repository.PageRepository;
+import com.example.jordpolarna.models.Page;
+import com.example.jordpolarna.repository.PageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

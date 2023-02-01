@@ -5,8 +5,6 @@ import com.example.jordpolarna.models.Page;
 import com.example.jordpolarna.models.Player;
 import com.example.jordpolarna.repository.AnswerRepository;
 import com.example.jordpolarna.repository.LevelRepository;
-import com.example.jordpolarna.repository.PageRepository;
-import com.example.jordpolarna.repository.PlayerRepository;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
