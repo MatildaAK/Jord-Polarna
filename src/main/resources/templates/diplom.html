@@ -8,14 +8,22 @@
 <body>
 <div class="outerBox">
     <div class="hero-certificate">
-        <h1 class="PlayerName "><a th:text="${player.name}" ></a></h1>
-        <img class="diplom" src="images/DiplomJordPolarna.jpg" width="500px" height="auto">
-    </div>
+            <div id="printContent">
+                <img class="diplom" src="images/DiplomJordPolarna.jpg" width="300px" height="auto" alt="diplom">
+                <div class="nameDiplom">
+                    <h1 class="PlayerName4 "><a th:text="${player.name}" ></a></h1>
+                </div>
+            </div>
 </div>
 
 
 <div class="HomeButton">
   <a th:href="'/levelOverview'"><button class="startSida">Tillbaka</button></a>
+    <button id="print">Skriv ut ditt diplom</button>
+</div>
+
+
+
 </div>
 </body>
 

@@ -7,17 +7,17 @@
 </head>
 <body>
 
-    <div>
+    <div class="OuterBox">
         <div class="hero-imagelvlstart"></div>
-            <h1 class="PlayerName ">Hej, <a th:text="${player.name}" ></a>!</h1>
-            <div id="PlayAudio"  >
+         <div>  <h1 class="PlayerName ">Hej, <a th:text="${player.name}" ></a>!</h1></div>
+        <div id="PlayAudio"  >
                 <button class="Speaker" onclick="playLvl()" type="button">
                     <img src="images/speakers.png" alt="Speaker" width="50" height="50">
                 </button>
             </div>
                 <div class="hero-text">
 
-                    <div>
+                    <div class="chooselvl">
                      <h2>Välj nivå: </h2>
                      </div>
                     <div class="BigBox">

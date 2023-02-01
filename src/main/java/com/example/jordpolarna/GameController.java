@@ -1,9 +1,12 @@
-package com.example.grupp1;
+package com.example.jordpolarna;
 
-import com.example.grupp1.models.Answer;
-import com.example.grupp1.models.Page;
-import com.example.grupp1.models.Player;
-import com.example.grupp1.repository.*;
+import com.example.jordpolarna.models.Answer;
+import com.example.jordpolarna.models.Page;
+import com.example.jordpolarna.models.Player;
+import com.example.jordpolarna.repository.AnswerRepository;
+import com.example.jordpolarna.repository.LevelRepository;
+import com.example.jordpolarna.repository.PageRepository;
+import com.example.jordpolarna.repository.PlayerRepository;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -177,7 +180,7 @@ public class GameController {
 
         return "level3";
     }
-    @GetMapping("/diplom")
+    @GetMapping("/level4")
     String diplom(Model model, HttpSession session){
         Player player = (Player) session.getAttribute("gameLevel");
         model.addAttribute("player", player);
