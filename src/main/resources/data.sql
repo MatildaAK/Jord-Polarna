@@ -31,26 +31,26 @@ INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('lekplats.png','Lekplats', 1)
 
 -- Answers question 2 lvl 1
 INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) VALUES ('parkbänk.png','Parkbänk', 2)
-INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('buske.png','Buske', 2)
+INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('buske01.png','Buske', 2)
 INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('flaskåtervinning.png','Flaskåtervinning', 2)
-INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('lekplats.png','Lekplats', 2)
+INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('papperskärl.png','Papperskärl', 2)
 
 -- Answers question 3 lvl 1
 INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) VALUES ('batterikärl.png','Batterikärl', 3)
-INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('lekplats.png','Lekplats', 3)
+INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('papperskärl.png','Papperskärl', 3)
 INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('papperskorg.png','Papperskorg', 3)
-INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('flaskåtervinning.png','Flaskåtervinning', 3)
+INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('lekplats.png','Lekplats', 3)
 
 -- Answers question 4 lvl 1
 INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) VALUES ('glaskärl.png','Glaskärl', 4)
-INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('parkbänk.png','Parkbänk', 4)
-INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('metallkärl2.png','Metallkärl', 4)
 INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('lekplats.png','Lekplats', 4)
+INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('metallkärl2.png','Metallkärl', 4)
+INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('parkbänk.png','Parkbänk', 4)
 
 -- Answers question 5 lvl 1
 INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) VALUES ('papperskorg.png','Papperskorg', 5)
-INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('glaskärl.png','Glaskärl', 5)
-INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('busstop.png','Buss stop', 5)
+INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('Sandlåda.png','Sandlåda', 5)
+INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('buske01.png','Buske', 5)
 INSERT INTO ANSWER(PICTURE,ALT, PAGE_ID) values ('flaskåtervinning.png','Flaskåtervinning', 5)
 
 -- Answers question 1 lvl 2 TEST
