@@ -369,16 +369,12 @@ hero-certificate{
 
 /* ---- Print-----*/
 @media print {
-    body * {
 
-    }
     .HomeButton {
         display:none;
     }
     #printContent, #printContent *{
         display: block;
     }
-    #print *{
-        display: block;
-    }
+
 }
