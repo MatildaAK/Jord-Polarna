@@ -54,7 +54,7 @@ body {
 }
 /*Background Image level3*/
 .hero-imagelvl3 {
-  background-image: url("/images/blommor.png "); /* The image used */
+  background-image: url("/images/bakgrundlvl3.png "); /* The image used */
   background-color: #cccccc; /* Used if the image is unavailable */
   height: 750px; /* You must set a specified height */
   background-position: center; /* Center the image */
