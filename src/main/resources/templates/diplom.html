@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <link rel="stylesheet" href="../static/style.css" th:href="'/style.css'">
+  <meta charset="UTF-8">
+    <title>JordPolarna</title>
+</head>
+<body>
+<div class="outerBox">
+    <div class="hero-certificate">
+        <h1 class="PlayerName "><a th:text="${player.name}" ></a></h1>
+        <img class="diplom" src="images/DiplomJordPolarna.jpg" width="500px" height="auto">
+    </div>
+</div>
+
+
+<div class="HomeButton">
+  <a th:href="'/levelOverview'"><button class="startSida">Tillbaka</button></a>
+</div>
+</body>
+
+<script type="text/javascript" th:src="@{action.js}"></script>
+</html>

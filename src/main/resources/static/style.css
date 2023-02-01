@@ -64,12 +64,18 @@ body {
     -webkit-filter: blur(2px);
 
 }
+/* Diplom sista sidan*/
+hero-certificate{
+    margin: 200px;
+    box-shadow: 2px 2px 4px black;
+    justify-content: center;
+}
 
 /* Create three equal columns that float next to each other */
 div.column {
     margin: 5px;
     float: left;
-    width: 300px;
+    width: 200px;
     border-radius: 15px;
     display: flex;
     justify-content: center;
@@ -78,7 +84,7 @@ div.column {
 }
 /* When the mouse is over the image*/
 div.column:hover {
-   transform: scale(1.5);
+   transform: scale(1.2);
    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
@@ -129,6 +135,8 @@ div.column button {
     position: fixed;
     top: 10px;
     left: 10px;
+    height: 10px;
+    weight: auto;
 }
 .Player{
      font-size: 14px;
@@ -284,7 +292,7 @@ pointer-events: none;
     padding: 10px;
     margin: 30px;
     shadow: 10px;
-    font-size: 30px;
+    font-size: 20px;
     background: rgba( 255, 255, 255, 0.7 );
     font-weight: bold;
 
@@ -297,15 +305,15 @@ pointer-events: none;
     padding: 10px;
     margin: 30px;
     shadow: 10px;
-    font-size: 30px;
+    font-size: 20px;
     background: rgba( 255, 255, 255, 0.4 );
     font-weight: bold;
 }
 .Speaker{
     background-color: transparent;
     position: fixed;
-    top: 35px;
-    right: 320px;
+    top: 30px;
+    left: 140px;
     border: transparent;
 
 }
