@@ -10,7 +10,10 @@
 <div class="OuterBox">
 <div class="hero-imagelvl2"></div>
 
-<h1 class="PlayerName ">Spelare:  <a th:text="${player.name}" ></a>!</h1>
+    <div class="PlayerName " th:each="page : ${pages}" th:if="${page.id == session.current}">
+        <h1>Spelare:  <a th:text="${player.name}" ></a>!</h1>
+        <h1>Poäng:  <a th:text="${page.id} - '1'" th:value="${page.id}" ></a>!</h1>
+    </div>
 
     <div id="PlayAudio">
         <button class="Speaker" th:attr="data-id=${session.current}" onclick="play_Audio(this.getAttribute('data-id'))" type="button">
