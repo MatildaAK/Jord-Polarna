@@ -74,10 +74,8 @@ public class GameController {
         }else{
             player.setGameLevel(levelRepository.findById(2L).get());
             playerService.savePlayer(player);
-
             return "redirect:/levelOverview";
         }
-
 
         List<Answer> answers = answerRepository.findAllFromPage(currentPage);
         model.addAttribute("answers", answers);
