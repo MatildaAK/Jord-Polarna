@@ -1,8 +1,9 @@
 
 const coll = document.querySelector(".errormsg");
+const questionText = document.getElementById("questiontext");
 var wrongAnswer = new Audio('audio/Felsvar.mp4');
 var rightAnswer = new Audio('audio/Rättsvar.mp4');
-
+var page = document.getElementById("pageId").value;
 const allAudio = [];
 /* Audio for the questions */
 var questionAudio1 = new Audio('audio/q1lvl1.mp4');
@@ -52,7 +53,6 @@ questionAudio1.play();
 
 
 function showId(correct, id){
-console.log("allaudio ", allAudio);
 allAudio.forEach(audio => pauseAudio(audio));
 var error = document.getElementById("errorMsg")
 var correctMsg = document.getElementById("correctRes")
@@ -66,6 +66,11 @@ correctMsg.classList.remove("hidden");
     pauseAudio(wrongAnswer);
     rightAnswer.currentTime = 0;
     }
+    console.log("page: ", this.page);
+    var text = returnText(this.page);
+    questionText.innerText = text;
+
+
 }
 else{
 correctMsg.classList.add("hidden");
@@ -93,3 +98,28 @@ const printBtn = document.getElementById('print');
 printBtn.addEventListener('click', function() {
     print();
 })
+
+function returnText(id){
+    if (id ==1){
+
+     var text = 'Det är viktigt att glasburkar hamnar på rätt plats eftersom det tar ungefär en miljon år för naturen att bryta ned glasflaskor. Bra jobbat!'
+        console.log(text);
+        return text;
+    }else if (id ==2){
+      return "Bra jobbat! Tänk på att du kan återanvända plastflaskor på flera olika sätt. Visste du att vissa plastflaskor även kan lämnas tillbaka till en matbutik genom att panta flaskan?"
+    }else if (id==3){
+    return "Batterier som inte slängs på rätt ställe kan vara dåligt för människor och djur om batterierna till exempel hamnar i en sjö. Det är därför extra viktigt att slänga batterierna på rätt plats. "
+    }else if(id ==4){
+    return "Korrekt! En kaviartub görs av aluminium som tar flera hundra år för naturen att bryta ned."
+    }else if(id ==5){
+    return "Ja, jättebra! Visste du att vi varje vecka slänger ungefär 60 ton skräp på gatan och i naturen?"
+    }else if(id==6){
+    return "Bra! Att cykla gör att både kropp och knopp mår bra. Förutom att få frisk luft får man även mer energi för att kunna lära sig fler saker i skolan. Det går dessutom fortare att ta sig till skolan."
+    }else if(id==7){
+    return "Självklart! Många av våra kompisar promenerar till skolan och då hinner vi träffa dem innan skolan börjar. Vi kanske till och med kan promenera tillsammans till skolan!"
+    }else if(id==8){
+    return "Tåg är bra!"
+    }
+
+
+}

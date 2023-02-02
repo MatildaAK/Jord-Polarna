@@ -28,11 +28,11 @@
         <div id="" th:if="${page.id == session.current}">
 
             <div class="question1">
-                <h2  th:text="${page.question}"></h2>
+                <h2 id="questiontext"  th:text="${page.question}"></h2>
             </div>
 
             <div class="BigBox">
-                <input type="hidden" name="id" th:value="${page.id}"/>
+                <input id ="pageId" type="hidden" name="id" th:value="${page.id}"/>
                 <div class="column" th:each="answer : ${answers}">
                     <button type="submit" class="ButtonInfo" name="answer" th:value="${answer.id}" width="400" height="400" th:attr="data-id=${answer.id},data-name=${page.correctAnswer}" th:onclick="showId(this.getAttribute('data-name'),this.getAttribute('data-id'))">
                         <img class="imageButton" width="200" height="200" th:src="@{/images/{id}(id=${answer.picture})}" th:alt="${answer.alt}">
