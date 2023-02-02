@@ -11,7 +11,7 @@
     <div class="hero-imagelvl1"></div>
         <div class="PlayerName " th:each="page : ${pages}" th:if="${page.id == session.current}">
         <h1>Spelare:  <a th:text="${player.name}" ></a>!</h1>
-        <h1>Poäng:  <a th:text="${page.id} - '1'" th:value="${page.id}" ></a>!</h1>
+        <h1>Poäng:  <a th:text="${page.id} - '1'" th:value="${page.id}" ></a></h1>
         </div>
 
         <div id="PlayAudio">
