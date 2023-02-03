@@ -118,7 +118,13 @@ function returnText(id){
     }else if(id==7){
     return "Självklart! Många av våra kompisar promenerar till skolan och då hinner vi träffa dem innan skolan börjar. Vi kanske till och med kan promenera tillsammans till skolan!"
     }else if(id==8){
-    return "Tåg är bra!"
+    return "Tåg är både snälla mot klimatet och rymmer väldigt många resenärer!"
+    }else if(id==9){
+     return "Bra! Flugsvampar är giftiga!"
+    }else if(id==10){
+    return "Bra jobbat! Bananskalet hör hemma i komposten!"
+    }else if(id==11){
+    return "Helt rätt! Mögligt bröd kan vara giftigt!"
     }
 
 
