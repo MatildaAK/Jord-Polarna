@@ -15,8 +15,7 @@ var questionAudio6 = new Audio('audio/q1lvl2.mp4');
 var questionAudio7 = new Audio('audio/q2lvl2.mp4');
 var questionAudio8 = new Audio('audio/q3lvl2.mp4');
 var questionAudio9 = new Audio('audio/q123lvl3.mp4');
-var presentation = new Audio('audio/Presentation.mp4');
-var level = new Audio('audio/väljlvl.mp4');
+
 allAudio.push(questionAudio1, questionAudio2, questionAudio3, questionAudio4, questionAudio5, questionAudio6,questionAudio7,questionAudio8);
 
 
@@ -86,11 +85,7 @@ error.classList.remove("hidden");
 }
 }
 
-function playPresentation(){
-presentation.play()}
 
-function playLvl(){
-level.play()}
 
 /*---Print---*/
 const printBtn = document.getElementById('print');
